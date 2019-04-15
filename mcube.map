@@ -1,0 +1,1303 @@
+
+ mcube
+
+ Start         Length     Name                   Class
+ 0001:00000000 000024000H TEXT32                 CODE 32-bit
+ 0002:00000000 000004000H DATA32                 DATA 32-bit
+ 0002:00004000 000004D90H BSS32                  BSS 32-bit
+ 0003:00000000 002000000H HEAP                   HEAP 32-bit
+ 0004:00000000 000100000H STACK                  STACK 32-bit
+
+ Origin   Group
+ 0000:0   FLAT
+ 0002:0   DGROUP
+
+  Address         Publics by Name
+
+ 0000:00000000  Imp  __CRT_init           (libc063.167)
+ 0000:00000000  Imp  __Unwind_DeleteException (gcc452.76)
+ 0000:00000000  Imp  __Unwind_GetDataRelBase (gcc452.81)
+ 0000:00000000  Imp  __Unwind_GetIPInfo   (gcc452.84)
+ 0000:00000000  Imp  __Unwind_GetLanguageSpecificData (gcc452.85)
+ 0000:00000000  Imp  __Unwind_GetRegionStart (gcc452.86)
+ 0000:00000000  Imp  __Unwind_GetTextRelBase (gcc452.87)
+ 0000:00000000  Imp  __Unwind_RaiseException (gcc452.88)
+ 0000:00000000  Imp  __Unwind_Resume      (gcc452.90)
+ 0000:00000000  Imp  __Unwind_Resume_or_Rethrow (gcc452.89)
+ 0000:00000000  Imp  __Unwind_SetGR       (gcc452.91)
+ 0000:00000000  Imp  __Unwind_SetIP       (gcc452.92)
+ 0001:000129F8       __Z10pressenterv
+ 0001:00012C00       __Z12sendsolutionv
+ 0001:000127C8       __Z14myrenderscreen5mcube
+ 0001:00013914       __Z15readcommandlineSs
+ 0001:000129B8       __Z9chartocolc
+ 0001:0001B3F0       __ZN10__cxxabiv111__terminateEPFvvE
+ 0001:0001B444       __ZN10__cxxabiv112__unexpectedEPFvvE
+ 0001:0001A8DE       __ZN10__cxxabiv115__forced_unwindD0Ev
+ 0001:0001A874       __ZN10__cxxabiv115__forced_unwindD1Ev
+ 0001:0001A874       __ZN10__cxxabiv115__forced_unwindD2Ev
+ 0001:00019E7A       __ZN10__cxxabiv117__class_type_infoD0Ev
+ 0001:00019E64       __ZN10__cxxabiv117__class_type_infoD1Ev
+ 0001:00019E64       __ZN10__cxxabiv117__class_type_infoD2Ev
+ 0001:0001A8C8       __ZN10__cxxabiv119__foreign_exceptionD0Ev
+ 0001:0001A882       __ZN10__cxxabiv119__foreign_exceptionD1Ev
+ 0001:0001A882       __ZN10__cxxabiv119__foreign_exceptionD2Ev
+ 0002:00003780       __ZN10__cxxabiv119__terminate_handlerE
+ 0001:0001BF0C       __ZN10__cxxabiv120__si_class_type_infoD0Ev
+ 0001:0001BEF6       __ZN10__cxxabiv120__si_class_type_infoD1Ev
+ 0001:0001BEF6       __ZN10__cxxabiv120__si_class_type_infoD2Ev
+ 0002:00003840       __ZN10__cxxabiv120__unexpected_handlerE
+ 0001:0001111C       __ZN5mcube10dosolutionEv
+ 0001:00003800       __ZN5mcube10findcenterEi
+ 0001:00005C3C       __ZN5mcube10findcornerEiii
+ 0001:000041A4       __ZN5mcube10findedge_lEii
+ 0001:00004798       __ZN5mcube10findedge_rEii
+ 0001:00006534       __ZN5mcube10rel_to_stdESs
+ 0001:00006964       __ZN5mcube10shortenmovEi
+ 0001:00006344       __ZN5mcube10std_to_relESs
+ 0001:000067BC       __ZN5mcube11metr_to_relESs
+ 0001:000060A0       __ZN5mcube11metr_to_stdESs
+ 0001:00006890       __ZN5mcube11rel_to_metrESs
+ 0001:00005CA8       __ZN5mcube11std_to_metrESs
+ 0001:00001EAC       __ZN5mcube12findcenter_bEi
+ 0001:00001B74       __ZN5mcube12findcenter_dEi
+ 0001:00001DDC       __ZN5mcube12findcenter_fEi
+ 0001:00001C44       __ZN5mcube12findcenter_lEi
+ 0001:00001D08       __ZN5mcube12findcenter_rEi
+ 0001:00001AA4       __ZN5mcube12findcenter_uEi
+ 0001:00005508       __ZN5mcube12findcorner_aEiii
+ 0001:00004DD4       __ZN5mcube12findcorner_cEiii
+ 0001:00008998       __ZN5mcube12findsolutionEv
+ 0001:00000374       __ZN5mcube12renderscreenEv
+ 0001:00001968       __ZN5mcube12scramblecubeEv
+ 0001:000069CC       __ZN5mcube12usehalfturnsESsi
+ 0001:000033EC       __ZN5mcube16findcenter_not_bEi
+ 0001:00002390       __ZN5mcube16findcenter_not_dEi
+ 0001:00002FD8       __ZN5mcube16findcenter_not_fEi
+ 0001:000027A4       __ZN5mcube16findcenter_not_lEi
+ 0001:00002BC4       __ZN5mcube16findcenter_not_rEi
+ 0001:00001F7C       __ZN5mcube16findcenter_not_uEi
+ 0001:000040DC       __ZN5mcube17find_not_center_bEi
+ 0001:00003DAC       __ZN5mcube17find_not_center_dEi
+ 0001:0000400C       __ZN5mcube17find_not_center_fEi
+ 0001:00003E7C       __ZN5mcube17find_not_center_lEi
+ 0001:00003F40       __ZN5mcube17find_not_center_rEi
+ 0001:00003CE4       __ZN5mcube17find_not_center_uEi
+ 0001:00001888       __ZN5mcube2B2Ev
+ 0001:00001574       __ZN5mcube2BAEv
+ 0001:00001558       __ZN5mcube2BCEv
+ 0001:000017BC       __ZN5mcube2CAEv
+ 0001:00001790       __ZN5mcube2CCEv
+ 0001:00001764       __ZN5mcube2CDEv
+ 0001:000016E0       __ZN5mcube2CLEv
+ 0001:0000170C       __ZN5mcube2CREv
+ 0001:00001738       __ZN5mcube2CUEv
+ 0001:00001808       __ZN5mcube2D2Ev
+ 0001:00001478       __ZN5mcube2DLEv
+ 0001:00001494       __ZN5mcube2DREv
+ 0001:00001868       __ZN5mcube2F2Ev
+ 0001:0000153C       __ZN5mcube2FAEv
+ 0001:00001520       __ZN5mcube2FCEv
+ 0001:00001828       __ZN5mcube2L2Ev
+ 0001:000014CC       __ZN5mcube2LDEv
+ 0001:000014B0       __ZN5mcube2LUEv
+ 0001:00001848       __ZN5mcube2R2Ev
+ 0001:00001504       __ZN5mcube2RDEv
+ 0001:000014E8       __ZN5mcube2RUEv
+ 0001:000017E8       __ZN5mcube2U2Ev
+ 0001:00001440       __ZN5mcube2ULEv
+ 0001:0000145C       __ZN5mcube2UREv
+ 0001:00001948       __ZN5mcube2b2Ev
+ 0001:000016C4       __ZN5mcube2bAEv
+ 0001:000016A8       __ZN5mcube2bCEv
+ 0001:000018C8       __ZN5mcube2d2Ev
+ 0001:000015C8       __ZN5mcube2dLEv
+ 0001:000015E4       __ZN5mcube2dREv
+ 0001:00001928       __ZN5mcube2f2Ev
+ 0001:0000168C       __ZN5mcube2fAEv
+ 0001:00001670       __ZN5mcube2fCEv
+ 0001:000018E8       __ZN5mcube2l2Ev
+ 0001:0000161C       __ZN5mcube2lDEv
+ 0001:00001600       __ZN5mcube2lUEv
+ 0001:00001908       __ZN5mcube2r2Ev
+ 0001:00001654       __ZN5mcube2rDEv
+ 0001:00001638       __ZN5mcube2rUEv
+ 0001:000018A8       __ZN5mcube2u2Ev
+ 0001:00001590       __ZN5mcube2uLEv
+ 0001:000015AC       __ZN5mcube2uREv
+ 0001:000001B0       __ZN5mcube4faceEiii
+ 0001:00006BFC       __ZN5mcube7conciseESsi
+ 0001:000109D8       __ZN5mcube7domovesESs
+ 0001:0000129C       __ZN5mcube7slice_aEi
+ 0001:00001114       __ZN5mcube7slice_cEi
+ 0001:00000FBC       __ZN5mcube7slice_dEi
+ 0001:00000B30       __ZN5mcube7slice_lEi
+ 0001:00000CBC       __ZN5mcube7slice_rEi
+ 0001:00000E50       __ZN5mcube7slice_uEi
+ 0002:000004E4       __ZN5mcube7versionE
+ 0001:00000ACC       __ZN5mcube8copytempEPA6_A6_iS2_
+ 0001:00004D8C       __ZN5mcube8findedgeEii
+ 0001:000007E4       __ZN5mcube8issolvedEv
+ 0002:00003E80       __ZN5mcube8numcubesE
+ 0001:00000924       __ZN5mcube9resetcubeEv
+ 0001:000111E8       __ZN5mcube9solvecubeEv
+ 0001:00000A4C       __ZN5mcubeC1Ev
+ 0001:00000A4C       __ZN5mcubeC2Ev
+ 0001:00000098       __ZN5mcubeD0Ev
+ 0001:00000040       __ZN5mcubeD1Ev
+ 0001:00000040       __ZN5mcubeD2Ev
+ 0001:000000B8       __ZN5mcubeeqERKS_
+ 0001:00000190       __ZN5mcubeneERKS_
+ 0001:00019B62       __ZN9__gnu_cxx12__atomic_addEPVii
+ 0002:000042C0       __ZN9__gnu_cxx15_Atomicity_lockILi0EE17_S_atomicity_lockE
+ 0001:0001B6EA       __ZN9__gnu_cxx17__recursive_mutex6unlockEv
+ 0001:00019B38       __ZN9__gnu_cxx18__exchange_and_addEPVii
+ 0001:0001B67E       __ZN9__gnu_cxx20recursive_init_errorD0Ev
+ 0001:0001B668       __ZN9__gnu_cxx20recursive_init_errorD1Ev
+ 0001:0001B668       __ZN9__gnu_cxx20recursive_init_errorD2Ev
+ 0001:00019FAE       __ZN9__gnu_cxx24__concurrence_lock_errorD0Ev
+ 0001:00019F98       __ZN9__gnu_cxx24__concurrence_lock_errorD1Ev
+ 0001:00019FEA       __ZN9__gnu_cxx26__concurrence_unlock_errorD0Ev
+ 0001:00019FD4       __ZN9__gnu_cxx26__concurrence_unlock_errorD1Ev
+ 0001:0001C166       __ZN9__gnu_cxx27__verbose_terminate_handlerEv
+ 0001:000197A6       __ZN9__gnu_cxxeqIPKcSsEEbRKNS_17__normal_iteratorIT_T0_EES8_
+ 0001:00019794       __ZN9__gnu_cxxeqIPcSsEEbRKNS_17__normal_iteratorIT_T0_EES7_
+ 0001:00019E08       __ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
+ 0001:00019D68       __ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
+ 0001:00019CF0       __ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
+ 0001:00019DAA       __ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
+ 0001:00019D52       __ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
+ 0001:0001BD58       __ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
+ 0001:0001BDB6       __ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
+ 0001:0001BE90       __ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
+ 0001:00019F5C       __ZNK9__gnu_cxx24__concurrence_lock_error4whatEv
+ 0001:00019F8E       __ZNK9__gnu_cxx26__concurrence_unlock_error4whatEv
+ 0001:00016A6A       __ZNKSs11_M_disjunctEPKc
+ 0001:00017192       __ZNKSs12find_last_ofEPKcj
+ 0001:0001710C       __ZNKSs12find_last_ofEPKcjj
+ 0001:00017168       __ZNKSs12find_last_ofERKSsj
+ 0001:000171CC       __ZNKSs12find_last_ofEcj
+ 0001:000170BE       __ZNKSs13find_first_ofEPKcj
+ 0001:0001703E       __ZNKSs13find_first_ofEPKcjj
+ 0001:00017094       __ZNKSs13find_first_ofERKSsj
+ 0001:000170F8       __ZNKSs13find_first_ofEcj
+ 0001:00016DFC       __ZNKSs13get_allocatorEv
+ 0001:00016A28       __ZNKSs15_M_check_lengthEjjPKc
+ 0001:00017352       __ZNKSs16find_last_not_ofEPKcj
+ 0001:000172CC       __ZNKSs16find_last_not_ofEPKcjj
+ 0001:00017328       __ZNKSs16find_last_not_ofERKSsj
+ 0001:0001738C       __ZNKSs16find_last_not_ofEcj
+ 0001:00017262       __ZNKSs17find_first_not_ofEPKcj
+ 0001:000171DC       __ZNKSs17find_first_not_ofEPKcjj
+ 0001:00017238       __ZNKSs17find_first_not_ofERKSsj
+ 0001:0001729C       __ZNKSs17find_first_not_ofEcj
+ 0001:00016CC2       __ZNKSs2atEj
+ 0001:00016BFA       __ZNKSs3endEv
+ 0001:0001766E       __ZNKSs4_Rep12_M_is_leakedEv
+ 0001:0001767C       __ZNKSs4_Rep12_M_is_sharedEv
+ 0001:00016C38       __ZNKSs4cendEv
+ 0001:00016CFA       __ZNKSs4copyEPcjj
+ 0001:000169B2       __ZNKSs4dataEv
+ 0001:00016EBC       __ZNKSs4findEPKcj
+ 0001:00016E06       __ZNKSs4findEPKcjj
+ 0001:00016E92       __ZNKSs4findERKSsj
+ 0001:00016EF6       __ZNKSs4findEcj
+ 0001:00016C1C       __ZNKSs4rendEv
+ 0001:00016C6C       __ZNKSs4sizeEv
+ 0001:00016BF0       __ZNKSs5beginEv
+ 0001:000168F8       __ZNKSs5c_strEv
+ 0001:00016C5A       __ZNKSs5crendEv
+ 0001:00016C92       __ZNKSs5emptyEv
+ 0001:00016FC2       __ZNKSs5rfindEPKcj
+ 0001:00016F40       __ZNKSs5rfindEPKcjj
+ 0001:00016F98       __ZNKSs5rfindERKSsj
+ 0001:00016FFC       __ZNKSs5rfindEcj
+ 0001:000169E2       __ZNKSs6_M_repEv
+ 0001:00016C2E       __ZNKSs6cbeginEv
+ 0001:000169BC       __ZNKSs6lengthEv
+ 0001:00016C08       __ZNKSs6rbeginEv
+ 0001:0001911C       __ZNKSs6substrEjj
+ 0001:000169CA       __ZNKSs7_M_dataEv
+ 0001:000169FA       __ZNKSs7_M_iendEv
+ 0001:00017528       __ZNKSs7compareEPKc
+ 0001:000173CE       __ZNKSs7compareERKSs
+ 0001:0001756E       __ZNKSs7compareEjjPKc
+ 0001:000175DE       __ZNKSs7compareEjjPKcj
+ 0001:0001741E       __ZNKSs7compareEjjRKSs
+ 0001:00017492       __ZNKSs7compareEjjRKSsjj
+ 0001:00016C46       __ZNKSs7crbeginEv
+ 0001:00016A08       __ZNKSs8_M_checkEjPKc
+ 0001:00016A50       __ZNKSs8_M_limitEjj
+ 0001:00016C84       __ZNKSs8capacityEv
+ 0001:00016C7A       __ZNKSs8max_sizeEv
+ 0001:000169F0       __ZNKSs9_M_ibeginEv
+ 0001:00016CA4       __ZNKSsixEj
+ 0001:00019C50       __ZNKSt10bad_typeid4whatEv
+ 0001:00016724       __ZNKSt10error_code23default_error_conditionEv
+ 0001:00015E88       __ZNKSt11logic_error4whatEv
+ 0001:0001984A       __ZNKSt12future_error4whatEv
+ 0001:0001A8BE       __ZNKSt13bad_exception4whatEv
+ 0001:00015E94       __ZNKSt13runtime_error4whatEv
+ 0001:000165BE       __ZNKSt14error_category10equivalentERKSt10error_codei
+ 0001:00016586       __ZNKSt14error_category10equivalentEiRKSt15error_condition
+ 0001:0001657A       __ZNKSt14error_category23default_error_conditionEi
+ 0001:00019B9E       __ZNKSt8bad_cast4whatEv
+ 0001:00015D48       __ZNKSt8ios_base7failure4whatEv
+ 0001:0001BBB0       __ZNKSt9bad_alloc4whatEv
+ 0001:0001A8A0       __ZNKSt9exception4whatEv
+ 0001:0001C082       __ZNKSt9type_info10__do_catchEPKS_PPvj
+ 0001:0001C006       __ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv
+ 0001:0001BFF6       __ZNKSt9type_info14__is_pointer_pEv
+ 0001:0001BFFE       __ZNKSt9type_info15__is_function_pEv
+ 0001:0001C024       __ZNKSt9type_infoeqERKS_
+ 0001:00016BBF       __ZNSs10_S_compareEjj
+ 0001:00017656       __ZNSs12_Alloc_hiderC1EPcRKSaIcE
+ 0001:00017648       __ZNSs12_Alloc_hiderC2EPcRKSaIcE
+ 0001:0001826A       __ZNSs12_M_leak_hardEv
+ 0001:00017768       __ZNSs12_S_constructEjcRKSaIcE
+ 0001:00018D6E       __ZNSs12_S_constructIN9__gnu_cxx17__normal_iteratorIPcSsEEEES2_T_S4_RKSaIcESt20forward_iterator_tag
+ 0001:00019160       __ZNSs12_S_constructIPKcEEPcT_S3_RKSaIcESt20forward_iterator_tag
+ 0001:00018E6A       __ZNSs12_S_constructIPcEES0_T_S1_RKSaIcESt20forward_iterator_tag
+ 0001:00016BCA       __ZNSs12_S_empty_repEv
+ 0001:00016B3B       __ZNSs13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIPKcSsEES4_
+ 0001:00016B0F       __ZNSs13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS_SsEES2_
+ 0001:00016B93       __ZNSs13_S_copy_charsEPcPKcS1_
+ 0001:00016B67       __ZNSs13_S_copy_charsEPcS_S_
+ 0001:00018A3E       __ZNSs13shrink_to_fitEv
+ 0001:00017C98       __ZNSs14_M_replace_auxEjjjc
+ 0001:00017A28       __ZNSs15_M_replace_safeEjjPKcj
+ 0001:000177EC       __ZNSs18_S_construct_aux_2EjcRKSaIcE
+ 0001:000182D2       __ZNSs2atEj
+ 0001:00018336       __ZNSs3endEv
+ 0001:00018426       __ZNSs4_Rep10_M_destroyERKSaIcE
+ 0001:000183EA       __ZNSs4_Rep10_M_disposeERKSaIcE
+ 0001:00018432       __ZNSs4_Rep10_M_refcopyEv
+ 0001:000176CE       __ZNSs4_Rep10_M_refdataEv
+ 0001:000197BC       __ZNSs4_Rep11_S_max_sizeE
+ 0001:000197C0       __ZNSs4_Rep11_S_terminalE
+ 0001:00017663       __ZNSs4_Rep12_S_empty_repEv
+ 0001:0001768C       __ZNSs4_Rep13_M_set_leakedEv
+ 0001:0001769C       __ZNSs4_Rep15_M_set_sharableEv
+ 0002:00004280       __ZNSs4_Rep20_S_empty_rep_storageE
+ 0001:000176AC       __ZNSs4_Rep26_M_set_length_and_sharableEj
+ 0001:000184E0       __ZNSs4_Rep7_M_grabERKSaIcES2_
+ 0001:00018462       __ZNSs4_Rep8_M_cloneERKSaIcEj
+ 0001:000176F2       __ZNSs4_Rep9_S_createEjjRKSaIcE
+ 0001:000197B8       __ZNSs4nposE
+ 0001:00018386       __ZNSs4rendEv
+ 0001:00016D6C       __ZNSs4swapERSs
+ 0001:00018362       __ZNSs5beginEv
+ 0001:0001823E       __ZNSs5clearEv
+ 0001:00017F58       __ZNSs5eraseEN9__gnu_cxx17__normal_iteratorIPcSsEE
+ 0001:00017F14       __ZNSs5eraseEN9__gnu_cxx17__normal_iteratorIPcSsEES2_
+ 0001:00017FAA       __ZNSs5eraseEjj
+ 0001:0001885C       __ZNSs6appendEPKc
+ 0001:00018778       __ZNSs6appendEPKcj
+ 0001:00018996       __ZNSs6appendERKSs
+ 0001:000188D0       __ZNSs6appendERKSsjj
+ 0001:00018850       __ZNSs6appendESt16initializer_listIcE
+ 0001:0001862C       __ZNSs6appendEjc
+ 0001:00016DB8       __ZNSs6assignEOSs
+ 0001:00017BA2       __ZNSs6assignEPKc
+ 0001:00017AAA       __ZNSs6assignEPKcj
+ 0001:00018B96       __ZNSs6assignERKSs
+ 0001:00017BD6       __ZNSs6assignERKSsjj
+ 0001:00017B96       __ZNSs6assignESt16initializer_listIcE
+ 0001:00017E70       __ZNSs6assignEjc
+ 0001:000181FC       __ZNSs6insertEN9__gnu_cxx17__normal_iteratorIPcSsEESt16initializer_listIcE
+ 0001:00017DC8       __ZNSs6insertEN9__gnu_cxx17__normal_iteratorIPcSsEEc
+ 0001:00017EA4       __ZNSs6insertEN9__gnu_cxx17__normal_iteratorIPcSsEEjc
+ 0001:00018170       __ZNSs6insertEjPKc
+ 0001:00017FFA       __ZNSs6insertEjPKcj
+ 0001:00018214       __ZNSs6insertEjRKSs
+ 0001:000181AA       __ZNSs6insertEjRKSsjj
+ 0001:00017E24       __ZNSs6insertEjjc
+ 0001:000183B4       __ZNSs6rbeginEv
+ 0001:00018756       __ZNSs6resizeEj
+ 0001:000186E8       __ZNSs6resizeEjc
+ 0001:00016A88       __ZNSs7_M_copyEPcPKcj
+ 0001:000169D4       __ZNSs7_M_dataEPc
+ 0001:000182BA       __ZNSs7_M_leakEv
+ 0001:00016AB2       __ZNSs7_M_moveEPcPKcj
+ 0001:0001954C       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_NS0_IPKcSsEES5_
+ 0001:000196EA       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_PKc
+ 0001:000195A0       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_PKcS4_
+ 0001:000195F4       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_PKcj
+ 0001:00019734       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_RKSs
+ 0001:000195CA       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_S1_S1_
+ 0001:00019576       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_S2_S2_
+ 0001:00019770       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_St16initializer_listIcE
+ 0001:00017D2C       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_jc
+ 0001:00019618       __ZNSs7replaceEjjPKc
+ 0001:00019398       __ZNSs7replaceEjjPKcj
+ 0001:000196B8       __ZNSs7replaceEjjRKSs
+ 0001:0001965A       __ZNSs7replaceEjjRKSsjj
+ 0001:00017D6E       __ZNSs7replaceEjjjc
+ 0001:0001852E       __ZNSs7reserveEj
+ 0001:00016ADC       __ZNSs9_M_assignEPcjc
+ 0001:000178A0       __ZNSs9_M_mutateEjjj
+ 0001:000185B0       __ZNSs9push_backEc
+ 0001:0001699C       __ZNSsC1EOSs
+ 0001:000192E8       __ZNSsC1EPKcRKSaIcE
+ 0001:0001936C       __ZNSsC1EPKcjRKSaIcE
+ 0001:00017850       __ZNSsC1ERKSaIcE
+ 0001:00018AD6       __ZNSsC1ERKSs
+ 0001:000190A8       __ZNSsC1ERKSsjj
+ 0001:00018FE8       __ZNSsC1ERKSsjjRKSaIcE
+ 0001:00019290       __ZNSsC1ESt16initializer_listIcERKSaIcE
+ 0001:00017800       __ZNSsC1EjcRKSaIcE
+ 0001:00016BE2       __ZNSsC1Ev
+ 0001:00018E14       __ZNSsC1IN9__gnu_cxx17__normal_iteratorIPcSsEEEET_S4_RKSaIcE
+ 0001:0001923C       __ZNSsC1IPKcEET_S2_RKSaIcE
+ 0001:00018F94       __ZNSsC1IPcEET_S1_RKSaIcE
+ 0001:00016986       __ZNSsC2EOSs
+ 0001:0001932A       __ZNSsC2EPKcRKSaIcE
+ 0001:00019210       __ZNSsC2EPKcjRKSaIcE
+ 0001:00017878       __ZNSsC2ERKSaIcE
+ 0001:00018B36       __ZNSsC2ERKSs
+ 0001:00018F34       __ZNSsC2ERKSsjj
+ 0001:00019048       __ZNSsC2ERKSsjjRKSaIcE
+ 0001:000192BC       __ZNSsC2ESt16initializer_listIcERKSaIcE
+ 0001:00017828       __ZNSsC2EjcRKSaIcE
+ 0001:00016BD4       __ZNSsC2Ev
+ 0001:00018DEA       __ZNSsC2IN9__gnu_cxx17__normal_iteratorIPcSsEEEET_S4_RKSaIcE
+ 0001:00019266       __ZNSsC2IPKcEET_S2_RKSaIcE
+ 0001:00018FBE       __ZNSsC2IPcEET_S1_RKSaIcE
+ 0001:00016944       __ZNSsD1Ev
+ 0001:00016902       __ZNSsD2Ev
+ 0001:00016DDA       __ZNSsaSEOSs
+ 0001:00017C48       __ZNSsaSEPKc
+ 0001:00018C30       __ZNSsaSERKSs
+ 0001:00017C20       __ZNSsaSESt16initializer_listIcE
+ 0001:00017ED8       __ZNSsaSEc
+ 0001:00018310       __ZNSsixEj
+ 0001:0001889C       __ZNSspLEPKc
+ 0001:00018A32       __ZNSspLERKSs
+ 0001:00018890       __ZNSspLESt16initializer_listIcE
+ 0001:00018A68       __ZNSspLEc
+ 0001:00019C70       __ZNSt10bad_typeidD0Ev
+ 0001:00019C5A       __ZNSt10bad_typeidD1Ev
+ 0001:00019C5A       __ZNSt10bad_typeidD2Ev
+ 0001:00016128       __ZNSt11logic_errorC1ERKSs
+ 0001:00016128       __ZNSt11logic_errorC2ERKSs
+ 0001:00016108       __ZNSt11logic_errorD0Ev
+ 0001:00015FC6       __ZNSt11logic_errorD1Ev
+ 0001:00015FC6       __ZNSt11logic_errorD2Ev
+ 0001:0001623C       __ZNSt11range_errorC1ERKSs
+ 0001:0001623C       __ZNSt11range_errorC2ERKSs
+ 0001:00015002       __ZNSt11range_errorD0Ev
+ 0001:00014FEC       __ZNSt11range_errorD1Ev
+ 0001:00016166       __ZNSt12domain_errorC1ERKSs
+ 0001:00016166       __ZNSt12domain_errorC2ERKSs
+ 0001:000150F2       __ZNSt12domain_errorD0Ev
+ 0001:000150DC       __ZNSt12domain_errorD1Ev
+ 0001:00019824       __ZNSt12future_errorD0Ev
+ 0001:0001980E       __ZNSt12future_errorD1Ev
+ 0001:0001980E       __ZNSt12future_errorD2Ev
+ 0001:000161B2       __ZNSt12length_errorC1ERKSs
+ 0001:000161B2       __ZNSt12length_errorC2ERKSs
+ 0001:0001507A       __ZNSt12length_errorD0Ev
+ 0001:00015064       __ZNSt12length_errorD1Ev
+ 0001:000161D8       __ZNSt12out_of_rangeC1ERKSs
+ 0001:000161D8       __ZNSt12out_of_rangeC2ERKSs
+ 0001:0001503E       __ZNSt12out_of_rangeD0Ev
+ 0001:00015028       __ZNSt12out_of_rangeD1Ev
+ 0001:000166B2       __ZNSt12system_errorD0Ev
+ 0001:0001669C       __ZNSt12system_errorD1Ev
+ 0001:0001669C       __ZNSt12system_errorD2Ev
+ 0001:0001A8F4       __ZNSt13bad_exceptionD0Ev
+ 0001:0001A866       __ZNSt13bad_exceptionD1Ev
+ 0001:0001A866       __ZNSt13bad_exceptionD2Ev
+ 0001:000161FE       __ZNSt13runtime_errorC1ERKSs
+ 0001:000161FE       __ZNSt13runtime_errorC2ERKSs
+ 0001:00015FA6       __ZNSt13runtime_errorD0Ev
+ 0001:00015EA0       __ZNSt13runtime_errorD1Ev
+ 0001:00015EA0       __ZNSt13runtime_errorD2Ev
+ 0001:000165F6       __ZNSt14error_categoryD0Ev
+ 0001:00016548       __ZNSt14error_categoryD1Ev
+ 0001:00016262       __ZNSt14overflow_errorC1ERKSs
+ 0001:00016262       __ZNSt14overflow_errorC2ERKSs
+ 0001:00014FC6       __ZNSt14overflow_errorD0Ev
+ 0001:00014FB0       __ZNSt14overflow_errorD1Ev
+ 0001:00016288       __ZNSt15underflow_errorC1ERKSs
+ 0001:00016288       __ZNSt15underflow_errorC2ERKSs
+ 0001:00014F8A       __ZNSt15underflow_errorD0Ev
+ 0001:00014F74       __ZNSt15underflow_errorD1Ev
+ 0001:0001618C       __ZNSt16invalid_argumentC1ERKSs
+ 0001:0001618C       __ZNSt16invalid_argumentC2ERKSs
+ 0001:000150B6       __ZNSt16invalid_argumentD0Ev
+ 0001:000150A0       __ZNSt16invalid_argumentD1Ev
+ 0001:00014F4E       __ZNSt17bad_function_callD0Ev
+ 0001:00014F38       __ZNSt17bad_function_callD1Ev
+ 0001:00019BBE       __ZNSt8bad_castD0Ev
+ 0001:00019BA8       __ZNSt8bad_castD1Ev
+ 0001:00019BA8       __ZNSt8bad_castD2Ev
+ 0001:00015DCA       __ZNSt8ios_base7failureC1ERKSs
+ 0001:00015DCA       __ZNSt8ios_base7failureC2ERKSs
+ 0001:00015DAA       __ZNSt8ios_base7failureD0Ev
+ 0001:00015D54       __ZNSt8ios_base7failureD1Ev
+ 0001:00015D54       __ZNSt8ios_base7failureD2Ev
+ 0001:0001BBD0       __ZNSt9bad_allocD0Ev
+ 0001:0001BBBA       __ZNSt9bad_allocD1Ev
+ 0001:0001BBBA       __ZNSt9bad_allocD2Ev
+ 0001:0001A90A       __ZNSt9exceptionD0Ev
+ 0001:0001A858       __ZNSt9exceptionD1Ev
+ 0001:0001A858       __ZNSt9exceptionD2Ev
+ 0001:0001C00E       __ZNSt9type_infoD0Ev
+ 0001:0001BFE8       __ZNSt9type_infoD1Ev
+ 0001:0001BFE8       __ZNSt9type_infoD2Ev
+ 0001:0001B452       __ZSt10unexpectedv
+ 0001:0001B463       __ZSt13set_terminatePFvvE
+ 0001:0001B476       __ZSt14set_unexpectedPFvvE
+ 0002:00004290       __ZSt15future_category
+ 0001:0001BBF5       __ZSt15set_new_handlerPFvvE
+ 0001:0001670F       __ZSt15system_categoryv
+ 0001:00015177       __ZSt16__throw_bad_castv
+ 0001:00016719       __ZSt16generic_categoryv
+ 0001:00015147       __ZSt17__throw_bad_allocv
+ 0001:000151A7       __ZSt18__throw_bad_typeidv
+ 0001:0001A83E       __ZSt18uncaught_exceptionv
+ 0001:000157B6       __ZSt19__throw_ios_failurePKc
+ 0001:000151D7       __ZSt19__throw_logic_errorPKc
+ 0001:000155C1       __ZSt19__throw_range_errorPKc
+ 0001:0001527E       __ZSt20__throw_domain_errorPKc
+ 0001:00015913       __ZSt20__throw_future_errori
+ 0001:000153CC       __ZSt20__throw_length_errorPKc
+ 0001:00015473       __ZSt20__throw_out_of_rangePKc
+ 0001:00015840       __ZSt20__throw_system_errori
+ 0001:00015117       __ZSt21__throw_bad_exceptionv
+ 0001:0001551A       __ZSt21__throw_runtime_errorPKc
+ 0001:00015668       __ZSt22__throw_overflow_errorPKc
+ 0001:0001570F       __ZSt23__throw_underflow_errorPKc
+ 0001:00015325       __ZSt24__throw_invalid_argumentPKc
+ 0001:000159D5       __ZSt25__throw_bad_function_callv
+ 0001:0001BC08       __ZSt7nothrow
+ 0001:0001B431       __ZSt9terminatev
+ 0001:00010924       __ZSteqIcSt11char_traitsIcESaIcEEbRKSbIT_T0_T1_EPKS3_
+ 0001:00018C3C       __ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
+ 0001:00011198       __ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ERKS6_S8_
+ 0001:00018CB6       __ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ES3_RKS6_
+ 0001:000125A8       __ZTI5mcube
+ 0001:0001A9F8       __ZTIN10__cxxabiv115__forced_unwindE
+ 0001:00019EF4       __ZTIN10__cxxabiv117__class_type_infoE
+ 0001:0001A9CC       __ZTIN10__cxxabiv119__foreign_exceptionE
+ 0001:0001BF90       __ZTIN10__cxxabiv120__si_class_type_infoE
+ 0001:0001BAC4       __ZTIN9__gnu_cxx20recursive_init_errorE
+ 0001:0001A680       __ZTIN9__gnu_cxx24__concurrence_lock_errorE
+ 0001:0001A6AC       __ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+ 0001:00015A5C       __ZTINSt8ios_base7failureE
+ 0001:00015B4C       __ZTISt10bad_typeid
+ 0001:00015A38       __ZTISt11logic_error
+ 0001:00015AAC       __ZTISt11range_error
+ 0001:00015B2C       __ZTISt12domain_error
+ 0001:00015A2C       __ZTISt12future_error
+ 0001:00015AEC       __ZTISt12length_error
+ 0001:00015ACC       __ZTISt12out_of_range
+ 0001:00015A44       __ZTISt12system_error
+ 0001:00015B70       __ZTISt13bad_exception
+ 0001:00015A50       __ZTISt13runtime_error
+ 0001:000167DC       __ZTISt14error_category
+ 0001:00015A8C       __ZTISt14overflow_error
+ 0001:00015A68       __ZTISt15underflow_error
+ 0001:00015B0C       __ZTISt16invalid_argument
+ 0001:00015A08       __ZTISt17bad_function_call
+ 0001:00015B58       __ZTISt8bad_cast
+ 0001:00015B64       __ZTISt9bad_alloc
+ 0001:00015BA0       __ZTISt9exception
+ 0001:00019F00       __ZTISt9type_info
+ 0001:000125A0       __ZTS5mcube
+ 0001:0001A9D8       __ZTSN10__cxxabiv115__forced_unwindE
+ 0001:00019ED0       __ZTSN10__cxxabiv117__class_type_infoE
+ 0001:0001A9A8       __ZTSN10__cxxabiv119__foreign_exceptionE
+ 0001:0001BF68       __ZTSN10__cxxabiv120__si_class_type_infoE
+ 0001:0001BAA0       __ZTSN9__gnu_cxx20recursive_init_errorE
+ 0001:0001A6D8       __ZTSN9__gnu_cxx24__concurrence_lock_errorE
+ 0001:0001A708       __ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+ 0001:00015C18       __ZTSNSt8ios_base7failureE
+ 0001:00015CF9       __ZTSSt10bad_typeid
+ 0001:00015BC8       __ZTSSt11logic_error
+ 0001:00015C78       __ZTSSt11range_error
+ 0001:00015CE8       __ZTSSt12domain_error
+ 0001:00015BA8       __ZTSSt12future_error
+ 0001:00015CA8       __ZTSSt12length_error
+ 0001:00015C88       __ZTSSt12out_of_range
+ 0001:00015BD8       __ZTSSt12system_error
+ 0001:00015D28       __ZTSSt13bad_exception
+ 0001:00015BF8       __ZTSSt13runtime_error
+ 0001:000167C8       __ZTSSt14error_category
+ 0001:00015C58       __ZTSSt14overflow_error
+ 0001:00015C38       __ZTSSt15underflow_error
+ 0001:00015CC8       __ZTSSt16invalid_argument
+ 0001:00015B88       __ZTSSt17bad_function_call
+ 0001:00015D08       __ZTSSt8bad_cast
+ 0001:00015D14       __ZTSSt9bad_alloc
+ 0001:00015D3A       __ZTSSt9exception
+ 0001:00019F08       __ZTSSt9type_info
+ 0001:00012590       __ZTV5mcube
+ 0001:0001A948       __ZTVN10__cxxabiv115__forced_unwindE
+ 0001:00019EA0       __ZTVN10__cxxabiv117__class_type_infoE
+ 0001:0001A928       __ZTVN10__cxxabiv119__foreign_exceptionE
+ 0001:0001BF38       __ZTVN10__cxxabiv120__si_class_type_infoE
+ 0001:0001BA80       __ZTVN9__gnu_cxx20recursive_init_errorE
+ 0001:0001A698       __ZTVN9__gnu_cxx24__concurrence_lock_errorE
+ 0001:0001A6B8       __ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+ 0001:00015E28       __ZTVNSt8ios_base7failureE
+ 0001:00019CA0       __ZTVSt10bad_typeid
+ 0001:000162D8       __ZTVSt11logic_error
+ 0001:00015AB8       __ZTVSt11range_error
+ 0001:00015B38       __ZTVSt12domain_error
+ 0001:00019A38       __ZTVSt12future_error
+ 0001:00015AF8       __ZTVSt12length_error
+ 0001:00015AD8       __ZTVSt12out_of_range
+ 0001:00016788       __ZTVSt12system_error
+ 0001:0001A968       __ZTVSt13bad_exception
+ 0001:000162B8       __ZTVSt13runtime_error
+ 0001:00016758       __ZTVSt14error_category
+ 0001:00015A98       __ZTVSt14overflow_error
+ 0001:00015A78       __ZTVSt15underflow_error
+ 0001:00015B18       __ZTVSt16invalid_argument
+ 0001:00015A18       __ZTVSt17bad_function_call
+ 0001:00019BF0       __ZTVSt8bad_cast
+ 0001:0001BC10       __ZTVSt9bad_alloc
+ 0001:0001A988       __ZTVSt9exception
+ 0001:0001C098       __ZTVSt9type_info
+ 0001:00019F20       __ZdlPv
+ 0001:0001BC60       __Znwj
+ 0002:00003E80       ___bss_start
+ 0001:00023D78       ___ctordtorInit
+ 0000:00000000  Imp  ___ctordtorInit1     (libc063.231)
+ 0001:00023DAA       ___ctordtorTerm
+ 0000:00000000  Imp  ___ctordtorTerm1     (libc063.232)
+ 0001:0001A354       ___cxa_allocate_dependent_exception
+ 0001:0001A00F       ___cxa_allocate_exception
+ 0001:0001A753       ___cxa_begin_catch
+ 0001:00023CC8       ___cxa_call_terminate
+ 0001:0001B26F       ___cxa_call_unexpected
+ 0001:00023D08       ___cxa_current_exception_type
+ 0001:00023111       ___cxa_demangle
+ 0001:0001A7BC       ___cxa_end_catch
+ 0001:0001A4F2       ___cxa_free_dependent_exception
+ 0001:0001A1ED       ___cxa_free_exception
+ 0001:0001A748       ___cxa_get_exception_ptr
+ 0001:0001AA5C       ___cxa_get_globals
+ 0001:0001AA48       ___cxa_get_globals_fast
+ 0001:0001B981       ___cxa_guard_abort
+ 0001:0001B743       ___cxa_guard_acquire
+ 0001:0001B9FD       ___cxa_guard_release
+ 0001:0001BD2C       ___cxa_pure_virtual
+ 0001:0001B52C       ___cxa_rethrow
+ 0001:0001B4CD       ___cxa_throw
+ 0002:00000000       ___data_start
+ 0000:00000000  Imp  ___deregister_frame  (gcc452.18)
+ 0001:00023D3B       ___do_global_ctors
+ 0001:00023D30       ___do_global_dtors
+ 0001:00023DE0       ___ehInit
+ 0001:00023E15       ___ehTerm
+ 0000:00000000  Imp  ___emutls_get_address (gcc452.23)
+ 0000:00000000  Imp  ___fmutex_release_internal (libc063.247)
+ 0000:00000000  Imp  ___fmutex_release_internal_must_complete (libc063.248)
+ 0000:00000000  Imp  ___fmutex_request_internal (libc063.249)
+ 0000:00000000  Imp  ___fmutex_request_internal_must_complete (libc063.250)
+ 0001:00023242       ___gcclibcxx_demangle_callback
+ 0001:0001ADDD       ___gxx_personality_v0
+ 0000:00000000  Imp  ___init_app          (libc063.265)
+ 0000:00000000  Imp  ___libc_Back_threadSleep (libc063.1490)
+ 0000:00000000  Imp  ___libc_ForkRegisterModule (libc063.343)
+ 0000:00000000  Imp  ___libc_GpFIBLIS     (libc063.5)
+ 0001:00023D53       ___main
+ 0002:00008D40       ___new_handler
+ 0000:00000000  Imp  ___register_frame_table (gcc452.65)
+ 0000:00000000  Imp  ___stderrp           (libc063.8)
+ 0000:00000000  Imp  ___stdinp            (libc063.9)
+ 0000:00000000  Imp  ___stdoutp           (libc063.10)
+ 0000:00000000  Imp  __alloca             (gcc452.74)
+ 0000:00000000  Imp  __atfork_callback    (libc063.445)
+ 0002:00000000       __data
+ 0002:00003E80       __edata
+ 0002:00008D90       __end
+ 0001:00024000       __etext
+ 0000:00000000  Imp  __fmutex_create      (libc063.559)
+ 0000:00000000  Imp  __std_abort          (libc063.653)
+ 0000:00000000  Imp  __std_atexit         (libc063.667)
+ 0000:00000000  Imp  __std_exit           (libc063.733)
+ 0000:00000000  Imp  __std_fflush         (libc063.745)
+ 0000:00000000  Imp  __std_fgetc          (libc063.747)
+ 0000:00000000  Imp  __std_fputc          (libc063.764)
+ 0000:00000000  Imp  __std_fputs          (libc063.766)
+ 0000:00000000  Imp  __std_free           (libc063.768)
+ 0000:00000000  Imp  __std_fwrite         (libc063.785)
+ 0000:00000000  Imp  __std_malloc         (libc063.856)
+ 0000:00000000  Imp  __std_memchr         (libc063.862)
+ 0000:00000000  Imp  __std_memcpy         (libc063.864)
+ 0000:00000000  Imp  __std_memmove        (libc063.866)
+ 0000:00000000  Imp  __std_memset         (libc063.867)
+ 0000:00000000  Imp  __std_printf         (libc063.892)
+ 0000:00000000  Imp  __std_putchar        (libc063.894)
+ 0000:00000000  Imp  __std_puts           (libc063.896)
+ 0000:00000000  Imp  __std_rand           (libc063.901)
+ 0000:00000000  Imp  __std_realloc        (libc063.907)
+ 0000:00000000  Imp  __std_sprintf        (libc063.989)
+ 0000:00000000  Imp  __std_srand          (libc063.992)
+ 0000:00000000  Imp  __std_strcmp         (libc063.1000)
+ 0000:00000000  Imp  __std_strcpy         (libc063.1002)
+ 0000:00000000  Imp  __std_strerror       (libc063.1005)
+ 0000:00000000  Imp  __std_time           (libc063.1060)
+ 0000:00000000  Imp  __std_write          (libc063.1098)
+ 0001:00000000       __text
+ 0000:00000000  Imp  __wildcard           (libc063.1163)
+ 0002:0000424C       _coltochar
+ 0002:00003E80       _edata
+ 0002:00008D90       _end
+ 0001:00024000       _etext
+ 0002:00004248       _inmode
+ 0001:00014A2C       _main
+ 0002:00004244       _randm
+ 0002:00003E90       _thecube
+ 0002:00004245       _verbal
+ 0002:00000B44       _version
+
+  Address         Publics by Value
+
+ 0000:00000000  Imp  __CRT_init           (libc063.167)
+ 0000:00000000  Imp  __Unwind_DeleteException (gcc452.76)
+ 0000:00000000  Imp  __Unwind_GetDataRelBase (gcc452.81)
+ 0000:00000000  Imp  __Unwind_GetIPInfo   (gcc452.84)
+ 0000:00000000  Imp  __Unwind_GetLanguageSpecificData (gcc452.85)
+ 0000:00000000  Imp  __Unwind_GetRegionStart (gcc452.86)
+ 0000:00000000  Imp  __Unwind_GetTextRelBase (gcc452.87)
+ 0000:00000000  Imp  __Unwind_RaiseException (gcc452.88)
+ 0000:00000000  Imp  __Unwind_Resume      (gcc452.90)
+ 0000:00000000  Imp  __Unwind_Resume_or_Rethrow (gcc452.89)
+ 0000:00000000  Imp  __Unwind_SetGR       (gcc452.91)
+ 0000:00000000  Imp  __Unwind_SetIP       (gcc452.92)
+ 0000:00000000  Imp  ___ctordtorInit1     (libc063.231)
+ 0000:00000000  Imp  ___ctordtorTerm1     (libc063.232)
+ 0000:00000000  Imp  ___deregister_frame  (gcc452.18)
+ 0000:00000000  Imp  ___emutls_get_address (gcc452.23)
+ 0000:00000000  Imp  ___fmutex_release_internal (libc063.247)
+ 0000:00000000  Imp  ___fmutex_release_internal_must_complete (libc063.248)
+ 0000:00000000  Imp  ___fmutex_request_internal (libc063.249)
+ 0000:00000000  Imp  ___fmutex_request_internal_must_complete (libc063.250)
+ 0000:00000000  Imp  ___init_app          (libc063.265)
+ 0000:00000000  Imp  ___libc_Back_threadSleep (libc063.1490)
+ 0000:00000000  Imp  ___libc_ForkRegisterModule (libc063.343)
+ 0000:00000000  Imp  ___libc_GpFIBLIS     (libc063.5)
+ 0000:00000000  Imp  ___register_frame_table (gcc452.65)
+ 0000:00000000  Imp  ___stderrp           (libc063.8)
+ 0000:00000000  Imp  ___stdinp            (libc063.9)
+ 0000:00000000  Imp  ___stdoutp           (libc063.10)
+ 0000:00000000  Imp  __alloca             (gcc452.74)
+ 0000:00000000  Imp  __atfork_callback    (libc063.445)
+ 0000:00000000  Imp  __fmutex_create      (libc063.559)
+ 0000:00000000  Imp  __std_abort          (libc063.653)
+ 0000:00000000  Imp  __std_atexit         (libc063.667)
+ 0000:00000000  Imp  __std_exit           (libc063.733)
+ 0000:00000000  Imp  __std_fflush         (libc063.745)
+ 0000:00000000  Imp  __std_fgetc          (libc063.747)
+ 0000:00000000  Imp  __std_fputc          (libc063.764)
+ 0000:00000000  Imp  __std_fputs          (libc063.766)
+ 0000:00000000  Imp  __std_free           (libc063.768)
+ 0000:00000000  Imp  __std_fwrite         (libc063.785)
+ 0000:00000000  Imp  __std_malloc         (libc063.856)
+ 0000:00000000  Imp  __std_memchr         (libc063.862)
+ 0000:00000000  Imp  __std_memcpy         (libc063.864)
+ 0000:00000000  Imp  __std_memmove        (libc063.866)
+ 0000:00000000  Imp  __std_memset         (libc063.867)
+ 0000:00000000  Imp  __std_printf         (libc063.892)
+ 0000:00000000  Imp  __std_putchar        (libc063.894)
+ 0000:00000000  Imp  __std_puts           (libc063.896)
+ 0000:00000000  Imp  __std_rand           (libc063.901)
+ 0000:00000000  Imp  __std_realloc        (libc063.907)
+ 0000:00000000  Imp  __std_sprintf        (libc063.989)
+ 0000:00000000  Imp  __std_srand          (libc063.992)
+ 0000:00000000  Imp  __std_strcmp         (libc063.1000)
+ 0000:00000000  Imp  __std_strcpy         (libc063.1002)
+ 0000:00000000  Imp  __std_strerror       (libc063.1005)
+ 0000:00000000  Imp  __std_time           (libc063.1060)
+ 0000:00000000  Imp  __std_write          (libc063.1098)
+ 0000:00000000  Imp  __wildcard           (libc063.1163)
+ 0001:00000000       __text
+ 0001:00000040       __ZN5mcubeD1Ev
+ 0001:00000040       __ZN5mcubeD2Ev
+ 0001:00000098       __ZN5mcubeD0Ev
+ 0001:000000B8       __ZN5mcubeeqERKS_
+ 0001:00000190       __ZN5mcubeneERKS_
+ 0001:000001B0       __ZN5mcube4faceEiii
+ 0001:00000374       __ZN5mcube12renderscreenEv
+ 0001:000007E4       __ZN5mcube8issolvedEv
+ 0001:00000924       __ZN5mcube9resetcubeEv
+ 0001:00000A4C       __ZN5mcubeC1Ev
+ 0001:00000A4C       __ZN5mcubeC2Ev
+ 0001:00000ACC       __ZN5mcube8copytempEPA6_A6_iS2_
+ 0001:00000B30       __ZN5mcube7slice_lEi
+ 0001:00000CBC       __ZN5mcube7slice_rEi
+ 0001:00000E50       __ZN5mcube7slice_uEi
+ 0001:00000FBC       __ZN5mcube7slice_dEi
+ 0001:00001114       __ZN5mcube7slice_cEi
+ 0001:0000129C       __ZN5mcube7slice_aEi
+ 0001:00001440       __ZN5mcube2ULEv
+ 0001:0000145C       __ZN5mcube2UREv
+ 0001:00001478       __ZN5mcube2DLEv
+ 0001:00001494       __ZN5mcube2DREv
+ 0001:000014B0       __ZN5mcube2LUEv
+ 0001:000014CC       __ZN5mcube2LDEv
+ 0001:000014E8       __ZN5mcube2RUEv
+ 0001:00001504       __ZN5mcube2RDEv
+ 0001:00001520       __ZN5mcube2FCEv
+ 0001:0000153C       __ZN5mcube2FAEv
+ 0001:00001558       __ZN5mcube2BCEv
+ 0001:00001574       __ZN5mcube2BAEv
+ 0001:00001590       __ZN5mcube2uLEv
+ 0001:000015AC       __ZN5mcube2uREv
+ 0001:000015C8       __ZN5mcube2dLEv
+ 0001:000015E4       __ZN5mcube2dREv
+ 0001:00001600       __ZN5mcube2lUEv
+ 0001:0000161C       __ZN5mcube2lDEv
+ 0001:00001638       __ZN5mcube2rUEv
+ 0001:00001654       __ZN5mcube2rDEv
+ 0001:00001670       __ZN5mcube2fCEv
+ 0001:0000168C       __ZN5mcube2fAEv
+ 0001:000016A8       __ZN5mcube2bCEv
+ 0001:000016C4       __ZN5mcube2bAEv
+ 0001:000016E0       __ZN5mcube2CLEv
+ 0001:0000170C       __ZN5mcube2CREv
+ 0001:00001738       __ZN5mcube2CUEv
+ 0001:00001764       __ZN5mcube2CDEv
+ 0001:00001790       __ZN5mcube2CCEv
+ 0001:000017BC       __ZN5mcube2CAEv
+ 0001:000017E8       __ZN5mcube2U2Ev
+ 0001:00001808       __ZN5mcube2D2Ev
+ 0001:00001828       __ZN5mcube2L2Ev
+ 0001:00001848       __ZN5mcube2R2Ev
+ 0001:00001868       __ZN5mcube2F2Ev
+ 0001:00001888       __ZN5mcube2B2Ev
+ 0001:000018A8       __ZN5mcube2u2Ev
+ 0001:000018C8       __ZN5mcube2d2Ev
+ 0001:000018E8       __ZN5mcube2l2Ev
+ 0001:00001908       __ZN5mcube2r2Ev
+ 0001:00001928       __ZN5mcube2f2Ev
+ 0001:00001948       __ZN5mcube2b2Ev
+ 0001:00001968       __ZN5mcube12scramblecubeEv
+ 0001:00001AA4       __ZN5mcube12findcenter_uEi
+ 0001:00001B74       __ZN5mcube12findcenter_dEi
+ 0001:00001C44       __ZN5mcube12findcenter_lEi
+ 0001:00001D08       __ZN5mcube12findcenter_rEi
+ 0001:00001DDC       __ZN5mcube12findcenter_fEi
+ 0001:00001EAC       __ZN5mcube12findcenter_bEi
+ 0001:00001F7C       __ZN5mcube16findcenter_not_uEi
+ 0001:00002390       __ZN5mcube16findcenter_not_dEi
+ 0001:000027A4       __ZN5mcube16findcenter_not_lEi
+ 0001:00002BC4       __ZN5mcube16findcenter_not_rEi
+ 0001:00002FD8       __ZN5mcube16findcenter_not_fEi
+ 0001:000033EC       __ZN5mcube16findcenter_not_bEi
+ 0001:00003800       __ZN5mcube10findcenterEi
+ 0001:00003CE4       __ZN5mcube17find_not_center_uEi
+ 0001:00003DAC       __ZN5mcube17find_not_center_dEi
+ 0001:00003E7C       __ZN5mcube17find_not_center_lEi
+ 0001:00003F40       __ZN5mcube17find_not_center_rEi
+ 0001:0000400C       __ZN5mcube17find_not_center_fEi
+ 0001:000040DC       __ZN5mcube17find_not_center_bEi
+ 0001:000041A4       __ZN5mcube10findedge_lEii
+ 0001:00004798       __ZN5mcube10findedge_rEii
+ 0001:00004D8C       __ZN5mcube8findedgeEii
+ 0001:00004DD4       __ZN5mcube12findcorner_cEiii
+ 0001:00005508       __ZN5mcube12findcorner_aEiii
+ 0001:00005C3C       __ZN5mcube10findcornerEiii
+ 0001:00005CA8       __ZN5mcube11std_to_metrESs
+ 0001:000060A0       __ZN5mcube11metr_to_stdESs
+ 0001:00006344       __ZN5mcube10std_to_relESs
+ 0001:00006534       __ZN5mcube10rel_to_stdESs
+ 0001:000067BC       __ZN5mcube11metr_to_relESs
+ 0001:00006890       __ZN5mcube11rel_to_metrESs
+ 0001:00006964       __ZN5mcube10shortenmovEi
+ 0001:000069CC       __ZN5mcube12usehalfturnsESsi
+ 0001:00006BFC       __ZN5mcube7conciseESsi
+ 0001:00008998       __ZN5mcube12findsolutionEv
+ 0001:00010924       __ZSteqIcSt11char_traitsIcESaIcEEbRKSbIT_T0_T1_EPKS3_
+ 0001:000109D8       __ZN5mcube7domovesESs
+ 0001:0001111C       __ZN5mcube10dosolutionEv
+ 0001:00011198       __ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ERKS6_S8_
+ 0001:000111E8       __ZN5mcube9solvecubeEv
+ 0001:00012590       __ZTV5mcube
+ 0001:000125A0       __ZTS5mcube
+ 0001:000125A8       __ZTI5mcube
+ 0001:000127C8       __Z14myrenderscreen5mcube
+ 0001:000129B8       __Z9chartocolc
+ 0001:000129F8       __Z10pressenterv
+ 0001:00012C00       __Z12sendsolutionv
+ 0001:00013914       __Z15readcommandlineSs
+ 0001:00014A2C       _main
+ 0001:00014F38       __ZNSt17bad_function_callD1Ev
+ 0001:00014F4E       __ZNSt17bad_function_callD0Ev
+ 0001:00014F74       __ZNSt15underflow_errorD1Ev
+ 0001:00014F8A       __ZNSt15underflow_errorD0Ev
+ 0001:00014FB0       __ZNSt14overflow_errorD1Ev
+ 0001:00014FC6       __ZNSt14overflow_errorD0Ev
+ 0001:00014FEC       __ZNSt11range_errorD1Ev
+ 0001:00015002       __ZNSt11range_errorD0Ev
+ 0001:00015028       __ZNSt12out_of_rangeD1Ev
+ 0001:0001503E       __ZNSt12out_of_rangeD0Ev
+ 0001:00015064       __ZNSt12length_errorD1Ev
+ 0001:0001507A       __ZNSt12length_errorD0Ev
+ 0001:000150A0       __ZNSt16invalid_argumentD1Ev
+ 0001:000150B6       __ZNSt16invalid_argumentD0Ev
+ 0001:000150DC       __ZNSt12domain_errorD1Ev
+ 0001:000150F2       __ZNSt12domain_errorD0Ev
+ 0001:00015117       __ZSt21__throw_bad_exceptionv
+ 0001:00015147       __ZSt17__throw_bad_allocv
+ 0001:00015177       __ZSt16__throw_bad_castv
+ 0001:000151A7       __ZSt18__throw_bad_typeidv
+ 0001:000151D7       __ZSt19__throw_logic_errorPKc
+ 0001:0001527E       __ZSt20__throw_domain_errorPKc
+ 0001:00015325       __ZSt24__throw_invalid_argumentPKc
+ 0001:000153CC       __ZSt20__throw_length_errorPKc
+ 0001:00015473       __ZSt20__throw_out_of_rangePKc
+ 0001:0001551A       __ZSt21__throw_runtime_errorPKc
+ 0001:000155C1       __ZSt19__throw_range_errorPKc
+ 0001:00015668       __ZSt22__throw_overflow_errorPKc
+ 0001:0001570F       __ZSt23__throw_underflow_errorPKc
+ 0001:000157B6       __ZSt19__throw_ios_failurePKc
+ 0001:00015840       __ZSt20__throw_system_errori
+ 0001:00015913       __ZSt20__throw_future_errori
+ 0001:000159D5       __ZSt25__throw_bad_function_callv
+ 0001:00015A08       __ZTISt17bad_function_call
+ 0001:00015A18       __ZTVSt17bad_function_call
+ 0001:00015A2C       __ZTISt12future_error
+ 0001:00015A38       __ZTISt11logic_error
+ 0001:00015A44       __ZTISt12system_error
+ 0001:00015A50       __ZTISt13runtime_error
+ 0001:00015A5C       __ZTINSt8ios_base7failureE
+ 0001:00015A68       __ZTISt15underflow_error
+ 0001:00015A78       __ZTVSt15underflow_error
+ 0001:00015A8C       __ZTISt14overflow_error
+ 0001:00015A98       __ZTVSt14overflow_error
+ 0001:00015AAC       __ZTISt11range_error
+ 0001:00015AB8       __ZTVSt11range_error
+ 0001:00015ACC       __ZTISt12out_of_range
+ 0001:00015AD8       __ZTVSt12out_of_range
+ 0001:00015AEC       __ZTISt12length_error
+ 0001:00015AF8       __ZTVSt12length_error
+ 0001:00015B0C       __ZTISt16invalid_argument
+ 0001:00015B18       __ZTVSt16invalid_argument
+ 0001:00015B2C       __ZTISt12domain_error
+ 0001:00015B38       __ZTVSt12domain_error
+ 0001:00015B4C       __ZTISt10bad_typeid
+ 0001:00015B58       __ZTISt8bad_cast
+ 0001:00015B64       __ZTISt9bad_alloc
+ 0001:00015B70       __ZTISt13bad_exception
+ 0001:00015B88       __ZTSSt17bad_function_call
+ 0001:00015BA0       __ZTISt9exception
+ 0001:00015BA8       __ZTSSt12future_error
+ 0001:00015BC8       __ZTSSt11logic_error
+ 0001:00015BD8       __ZTSSt12system_error
+ 0001:00015BF8       __ZTSSt13runtime_error
+ 0001:00015C18       __ZTSNSt8ios_base7failureE
+ 0001:00015C38       __ZTSSt15underflow_error
+ 0001:00015C58       __ZTSSt14overflow_error
+ 0001:00015C78       __ZTSSt11range_error
+ 0001:00015C88       __ZTSSt12out_of_range
+ 0001:00015CA8       __ZTSSt12length_error
+ 0001:00015CC8       __ZTSSt16invalid_argument
+ 0001:00015CE8       __ZTSSt12domain_error
+ 0001:00015CF9       __ZTSSt10bad_typeid
+ 0001:00015D08       __ZTSSt8bad_cast
+ 0001:00015D14       __ZTSSt9bad_alloc
+ 0001:00015D28       __ZTSSt13bad_exception
+ 0001:00015D3A       __ZTSSt9exception
+ 0001:00015D48       __ZNKSt8ios_base7failure4whatEv
+ 0001:00015D54       __ZNSt8ios_base7failureD1Ev
+ 0001:00015D54       __ZNSt8ios_base7failureD2Ev
+ 0001:00015DAA       __ZNSt8ios_base7failureD0Ev
+ 0001:00015DCA       __ZNSt8ios_base7failureC1ERKSs
+ 0001:00015DCA       __ZNSt8ios_base7failureC2ERKSs
+ 0001:00015E28       __ZTVNSt8ios_base7failureE
+ 0001:00015E88       __ZNKSt11logic_error4whatEv
+ 0001:00015E94       __ZNKSt13runtime_error4whatEv
+ 0001:00015EA0       __ZNSt13runtime_errorD1Ev
+ 0001:00015EA0       __ZNSt13runtime_errorD2Ev
+ 0001:00015FA6       __ZNSt13runtime_errorD0Ev
+ 0001:00015FC6       __ZNSt11logic_errorD1Ev
+ 0001:00015FC6       __ZNSt11logic_errorD2Ev
+ 0001:00016108       __ZNSt11logic_errorD0Ev
+ 0001:00016128       __ZNSt11logic_errorC1ERKSs
+ 0001:00016128       __ZNSt11logic_errorC2ERKSs
+ 0001:00016166       __ZNSt12domain_errorC1ERKSs
+ 0001:00016166       __ZNSt12domain_errorC2ERKSs
+ 0001:0001618C       __ZNSt16invalid_argumentC1ERKSs
+ 0001:0001618C       __ZNSt16invalid_argumentC2ERKSs
+ 0001:000161B2       __ZNSt12length_errorC1ERKSs
+ 0001:000161B2       __ZNSt12length_errorC2ERKSs
+ 0001:000161D8       __ZNSt12out_of_rangeC1ERKSs
+ 0001:000161D8       __ZNSt12out_of_rangeC2ERKSs
+ 0001:000161FE       __ZNSt13runtime_errorC1ERKSs
+ 0001:000161FE       __ZNSt13runtime_errorC2ERKSs
+ 0001:0001623C       __ZNSt11range_errorC1ERKSs
+ 0001:0001623C       __ZNSt11range_errorC2ERKSs
+ 0001:00016262       __ZNSt14overflow_errorC1ERKSs
+ 0001:00016262       __ZNSt14overflow_errorC2ERKSs
+ 0001:00016288       __ZNSt15underflow_errorC1ERKSs
+ 0001:00016288       __ZNSt15underflow_errorC2ERKSs
+ 0001:000162B8       __ZTVSt13runtime_error
+ 0001:000162D8       __ZTVSt11logic_error
+ 0001:00016548       __ZNSt14error_categoryD1Ev
+ 0001:0001657A       __ZNKSt14error_category23default_error_conditionEi
+ 0001:00016586       __ZNKSt14error_category10equivalentEiRKSt15error_condition
+ 0001:000165BE       __ZNKSt14error_category10equivalentERKSt10error_codei
+ 0001:000165F6       __ZNSt14error_categoryD0Ev
+ 0001:0001669C       __ZNSt12system_errorD1Ev
+ 0001:0001669C       __ZNSt12system_errorD2Ev
+ 0001:000166B2       __ZNSt12system_errorD0Ev
+ 0001:0001670F       __ZSt15system_categoryv
+ 0001:00016719       __ZSt16generic_categoryv
+ 0001:00016724       __ZNKSt10error_code23default_error_conditionEv
+ 0001:00016758       __ZTVSt14error_category
+ 0001:00016788       __ZTVSt12system_error
+ 0001:000167C8       __ZTSSt14error_category
+ 0001:000167DC       __ZTISt14error_category
+ 0001:000168F8       __ZNKSs5c_strEv
+ 0001:00016902       __ZNSsD2Ev
+ 0001:00016944       __ZNSsD1Ev
+ 0001:00016986       __ZNSsC2EOSs
+ 0001:0001699C       __ZNSsC1EOSs
+ 0001:000169B2       __ZNKSs4dataEv
+ 0001:000169BC       __ZNKSs6lengthEv
+ 0001:000169CA       __ZNKSs7_M_dataEv
+ 0001:000169D4       __ZNSs7_M_dataEPc
+ 0001:000169E2       __ZNKSs6_M_repEv
+ 0001:000169F0       __ZNKSs9_M_ibeginEv
+ 0001:000169FA       __ZNKSs7_M_iendEv
+ 0001:00016A08       __ZNKSs8_M_checkEjPKc
+ 0001:00016A28       __ZNKSs15_M_check_lengthEjjPKc
+ 0001:00016A50       __ZNKSs8_M_limitEjj
+ 0001:00016A6A       __ZNKSs11_M_disjunctEPKc
+ 0001:00016A88       __ZNSs7_M_copyEPcPKcj
+ 0001:00016AB2       __ZNSs7_M_moveEPcPKcj
+ 0001:00016ADC       __ZNSs9_M_assignEPcjc
+ 0001:00016B0F       __ZNSs13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS_SsEES2_
+ 0001:00016B3B       __ZNSs13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIPKcSsEES4_
+ 0001:00016B67       __ZNSs13_S_copy_charsEPcS_S_
+ 0001:00016B93       __ZNSs13_S_copy_charsEPcPKcS1_
+ 0001:00016BBF       __ZNSs10_S_compareEjj
+ 0001:00016BCA       __ZNSs12_S_empty_repEv
+ 0001:00016BD4       __ZNSsC2Ev
+ 0001:00016BE2       __ZNSsC1Ev
+ 0001:00016BF0       __ZNKSs5beginEv
+ 0001:00016BFA       __ZNKSs3endEv
+ 0001:00016C08       __ZNKSs6rbeginEv
+ 0001:00016C1C       __ZNKSs4rendEv
+ 0001:00016C2E       __ZNKSs6cbeginEv
+ 0001:00016C38       __ZNKSs4cendEv
+ 0001:00016C46       __ZNKSs7crbeginEv
+ 0001:00016C5A       __ZNKSs5crendEv
+ 0001:00016C6C       __ZNKSs4sizeEv
+ 0001:00016C7A       __ZNKSs8max_sizeEv
+ 0001:00016C84       __ZNKSs8capacityEv
+ 0001:00016C92       __ZNKSs5emptyEv
+ 0001:00016CA4       __ZNKSsixEj
+ 0001:00016CC2       __ZNKSs2atEj
+ 0001:00016CFA       __ZNKSs4copyEPcjj
+ 0001:00016D6C       __ZNSs4swapERSs
+ 0001:00016DB8       __ZNSs6assignEOSs
+ 0001:00016DDA       __ZNSsaSEOSs
+ 0001:00016DFC       __ZNKSs13get_allocatorEv
+ 0001:00016E06       __ZNKSs4findEPKcjj
+ 0001:00016E92       __ZNKSs4findERKSsj
+ 0001:00016EBC       __ZNKSs4findEPKcj
+ 0001:00016EF6       __ZNKSs4findEcj
+ 0001:00016F40       __ZNKSs5rfindEPKcjj
+ 0001:00016F98       __ZNKSs5rfindERKSsj
+ 0001:00016FC2       __ZNKSs5rfindEPKcj
+ 0001:00016FFC       __ZNKSs5rfindEcj
+ 0001:0001703E       __ZNKSs13find_first_ofEPKcjj
+ 0001:00017094       __ZNKSs13find_first_ofERKSsj
+ 0001:000170BE       __ZNKSs13find_first_ofEPKcj
+ 0001:000170F8       __ZNKSs13find_first_ofEcj
+ 0001:0001710C       __ZNKSs12find_last_ofEPKcjj
+ 0001:00017168       __ZNKSs12find_last_ofERKSsj
+ 0001:00017192       __ZNKSs12find_last_ofEPKcj
+ 0001:000171CC       __ZNKSs12find_last_ofEcj
+ 0001:000171DC       __ZNKSs17find_first_not_ofEPKcjj
+ 0001:00017238       __ZNKSs17find_first_not_ofERKSsj
+ 0001:00017262       __ZNKSs17find_first_not_ofEPKcj
+ 0001:0001729C       __ZNKSs17find_first_not_ofEcj
+ 0001:000172CC       __ZNKSs16find_last_not_ofEPKcjj
+ 0001:00017328       __ZNKSs16find_last_not_ofERKSsj
+ 0001:00017352       __ZNKSs16find_last_not_ofEPKcj
+ 0001:0001738C       __ZNKSs16find_last_not_ofEcj
+ 0001:000173CE       __ZNKSs7compareERKSs
+ 0001:0001741E       __ZNKSs7compareEjjRKSs
+ 0001:00017492       __ZNKSs7compareEjjRKSsjj
+ 0001:00017528       __ZNKSs7compareEPKc
+ 0001:0001756E       __ZNKSs7compareEjjPKc
+ 0001:000175DE       __ZNKSs7compareEjjPKcj
+ 0001:00017648       __ZNSs12_Alloc_hiderC2EPcRKSaIcE
+ 0001:00017656       __ZNSs12_Alloc_hiderC1EPcRKSaIcE
+ 0001:00017663       __ZNSs4_Rep12_S_empty_repEv
+ 0001:0001766E       __ZNKSs4_Rep12_M_is_leakedEv
+ 0001:0001767C       __ZNKSs4_Rep12_M_is_sharedEv
+ 0001:0001768C       __ZNSs4_Rep13_M_set_leakedEv
+ 0001:0001769C       __ZNSs4_Rep15_M_set_sharableEv
+ 0001:000176AC       __ZNSs4_Rep26_M_set_length_and_sharableEj
+ 0001:000176CE       __ZNSs4_Rep10_M_refdataEv
+ 0001:000176F2       __ZNSs4_Rep9_S_createEjjRKSaIcE
+ 0001:00017768       __ZNSs12_S_constructEjcRKSaIcE
+ 0001:000177EC       __ZNSs18_S_construct_aux_2EjcRKSaIcE
+ 0001:00017800       __ZNSsC1EjcRKSaIcE
+ 0001:00017828       __ZNSsC2EjcRKSaIcE
+ 0001:00017850       __ZNSsC1ERKSaIcE
+ 0001:00017878       __ZNSsC2ERKSaIcE
+ 0001:000178A0       __ZNSs9_M_mutateEjjj
+ 0001:00017A28       __ZNSs15_M_replace_safeEjjPKcj
+ 0001:00017AAA       __ZNSs6assignEPKcj
+ 0001:00017B96       __ZNSs6assignESt16initializer_listIcE
+ 0001:00017BA2       __ZNSs6assignEPKc
+ 0001:00017BD6       __ZNSs6assignERKSsjj
+ 0001:00017C20       __ZNSsaSESt16initializer_listIcE
+ 0001:00017C48       __ZNSsaSEPKc
+ 0001:00017C98       __ZNSs14_M_replace_auxEjjjc
+ 0001:00017D2C       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_jc
+ 0001:00017D6E       __ZNSs7replaceEjjjc
+ 0001:00017DC8       __ZNSs6insertEN9__gnu_cxx17__normal_iteratorIPcSsEEc
+ 0001:00017E24       __ZNSs6insertEjjc
+ 0001:00017E70       __ZNSs6assignEjc
+ 0001:00017EA4       __ZNSs6insertEN9__gnu_cxx17__normal_iteratorIPcSsEEjc
+ 0001:00017ED8       __ZNSsaSEc
+ 0001:00017F14       __ZNSs5eraseEN9__gnu_cxx17__normal_iteratorIPcSsEES2_
+ 0001:00017F58       __ZNSs5eraseEN9__gnu_cxx17__normal_iteratorIPcSsEE
+ 0001:00017FAA       __ZNSs5eraseEjj
+ 0001:00017FFA       __ZNSs6insertEjPKcj
+ 0001:00018170       __ZNSs6insertEjPKc
+ 0001:000181AA       __ZNSs6insertEjRKSsjj
+ 0001:000181FC       __ZNSs6insertEN9__gnu_cxx17__normal_iteratorIPcSsEESt16initializer_listIcE
+ 0001:00018214       __ZNSs6insertEjRKSs
+ 0001:0001823E       __ZNSs5clearEv
+ 0001:0001826A       __ZNSs12_M_leak_hardEv
+ 0001:000182BA       __ZNSs7_M_leakEv
+ 0001:000182D2       __ZNSs2atEj
+ 0001:00018310       __ZNSsixEj
+ 0001:00018336       __ZNSs3endEv
+ 0001:00018362       __ZNSs5beginEv
+ 0001:00018386       __ZNSs4rendEv
+ 0001:000183B4       __ZNSs6rbeginEv
+ 0001:000183EA       __ZNSs4_Rep10_M_disposeERKSaIcE
+ 0001:00018426       __ZNSs4_Rep10_M_destroyERKSaIcE
+ 0001:00018432       __ZNSs4_Rep10_M_refcopyEv
+ 0001:00018462       __ZNSs4_Rep8_M_cloneERKSaIcEj
+ 0001:000184E0       __ZNSs4_Rep7_M_grabERKSaIcES2_
+ 0001:0001852E       __ZNSs7reserveEj
+ 0001:000185B0       __ZNSs9push_backEc
+ 0001:0001862C       __ZNSs6appendEjc
+ 0001:000186E8       __ZNSs6resizeEjc
+ 0001:00018756       __ZNSs6resizeEj
+ 0001:00018778       __ZNSs6appendEPKcj
+ 0001:00018850       __ZNSs6appendESt16initializer_listIcE
+ 0001:0001885C       __ZNSs6appendEPKc
+ 0001:00018890       __ZNSspLESt16initializer_listIcE
+ 0001:0001889C       __ZNSspLEPKc
+ 0001:000188D0       __ZNSs6appendERKSsjj
+ 0001:00018996       __ZNSs6appendERKSs
+ 0001:00018A32       __ZNSspLERKSs
+ 0001:00018A3E       __ZNSs13shrink_to_fitEv
+ 0001:00018A68       __ZNSspLEc
+ 0001:00018AD6       __ZNSsC1ERKSs
+ 0001:00018B36       __ZNSsC2ERKSs
+ 0001:00018B96       __ZNSs6assignERKSs
+ 0001:00018C30       __ZNSsaSERKSs
+ 0001:00018C3C       __ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
+ 0001:00018CB6       __ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ES3_RKS6_
+ 0001:00018D6E       __ZNSs12_S_constructIN9__gnu_cxx17__normal_iteratorIPcSsEEEES2_T_S4_RKSaIcESt20forward_iterator_tag
+ 0001:00018DEA       __ZNSsC2IN9__gnu_cxx17__normal_iteratorIPcSsEEEET_S4_RKSaIcE
+ 0001:00018E14       __ZNSsC1IN9__gnu_cxx17__normal_iteratorIPcSsEEEET_S4_RKSaIcE
+ 0001:00018E6A       __ZNSs12_S_constructIPcEES0_T_S1_RKSaIcESt20forward_iterator_tag
+ 0001:00018F34       __ZNSsC2ERKSsjj
+ 0001:00018F94       __ZNSsC1IPcEET_S1_RKSaIcE
+ 0001:00018FBE       __ZNSsC2IPcEET_S1_RKSaIcE
+ 0001:00018FE8       __ZNSsC1ERKSsjjRKSaIcE
+ 0001:00019048       __ZNSsC2ERKSsjjRKSaIcE
+ 0001:000190A8       __ZNSsC1ERKSsjj
+ 0001:0001911C       __ZNKSs6substrEjj
+ 0001:00019160       __ZNSs12_S_constructIPKcEEPcT_S3_RKSaIcESt20forward_iterator_tag
+ 0001:00019210       __ZNSsC2EPKcjRKSaIcE
+ 0001:0001923C       __ZNSsC1IPKcEET_S2_RKSaIcE
+ 0001:00019266       __ZNSsC2IPKcEET_S2_RKSaIcE
+ 0001:00019290       __ZNSsC1ESt16initializer_listIcERKSaIcE
+ 0001:000192BC       __ZNSsC2ESt16initializer_listIcERKSaIcE
+ 0001:000192E8       __ZNSsC1EPKcRKSaIcE
+ 0001:0001932A       __ZNSsC2EPKcRKSaIcE
+ 0001:0001936C       __ZNSsC1EPKcjRKSaIcE
+ 0001:00019398       __ZNSs7replaceEjjPKcj
+ 0001:0001954C       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_NS0_IPKcSsEES5_
+ 0001:00019576       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_S2_S2_
+ 0001:000195A0       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_PKcS4_
+ 0001:000195CA       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_S1_S1_
+ 0001:000195F4       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_PKcj
+ 0001:00019618       __ZNSs7replaceEjjPKc
+ 0001:0001965A       __ZNSs7replaceEjjRKSsjj
+ 0001:000196B8       __ZNSs7replaceEjjRKSs
+ 0001:000196EA       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_PKc
+ 0001:00019734       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_RKSs
+ 0001:00019770       __ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_St16initializer_listIcE
+ 0001:00019794       __ZN9__gnu_cxxeqIPcSsEEbRKNS_17__normal_iteratorIT_T0_EES7_
+ 0001:000197A6       __ZN9__gnu_cxxeqIPKcSsEEbRKNS_17__normal_iteratorIT_T0_EES8_
+ 0001:000197B8       __ZNSs4nposE
+ 0001:000197BC       __ZNSs4_Rep11_S_max_sizeE
+ 0001:000197C0       __ZNSs4_Rep11_S_terminalE
+ 0001:0001980E       __ZNSt12future_errorD1Ev
+ 0001:0001980E       __ZNSt12future_errorD2Ev
+ 0001:00019824       __ZNSt12future_errorD0Ev
+ 0001:0001984A       __ZNKSt12future_error4whatEv
+ 0001:00019A38       __ZTVSt12future_error
+ 0001:00019B38       __ZN9__gnu_cxx18__exchange_and_addEPVii
+ 0001:00019B62       __ZN9__gnu_cxx12__atomic_addEPVii
+ 0001:00019B9E       __ZNKSt8bad_cast4whatEv
+ 0001:00019BA8       __ZNSt8bad_castD1Ev
+ 0001:00019BA8       __ZNSt8bad_castD2Ev
+ 0001:00019BBE       __ZNSt8bad_castD0Ev
+ 0001:00019BF0       __ZTVSt8bad_cast
+ 0001:00019C50       __ZNKSt10bad_typeid4whatEv
+ 0001:00019C5A       __ZNSt10bad_typeidD1Ev
+ 0001:00019C5A       __ZNSt10bad_typeidD2Ev
+ 0001:00019C70       __ZNSt10bad_typeidD0Ev
+ 0001:00019CA0       __ZTVSt10bad_typeid
+ 0001:00019CF0       __ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
+ 0001:00019D52       __ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
+ 0001:00019D68       __ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
+ 0001:00019DAA       __ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
+ 0001:00019E08       __ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
+ 0001:00019E64       __ZN10__cxxabiv117__class_type_infoD1Ev
+ 0001:00019E64       __ZN10__cxxabiv117__class_type_infoD2Ev
+ 0001:00019E7A       __ZN10__cxxabiv117__class_type_infoD0Ev
+ 0001:00019EA0       __ZTVN10__cxxabiv117__class_type_infoE
+ 0001:00019ED0       __ZTSN10__cxxabiv117__class_type_infoE
+ 0001:00019EF4       __ZTIN10__cxxabiv117__class_type_infoE
+ 0001:00019F00       __ZTISt9type_info
+ 0001:00019F08       __ZTSSt9type_info
+ 0001:00019F20       __ZdlPv
+ 0001:00019F5C       __ZNK9__gnu_cxx24__concurrence_lock_error4whatEv
+ 0001:00019F8E       __ZNK9__gnu_cxx26__concurrence_unlock_error4whatEv
+ 0001:00019F98       __ZN9__gnu_cxx24__concurrence_lock_errorD1Ev
+ 0001:00019FAE       __ZN9__gnu_cxx24__concurrence_lock_errorD0Ev
+ 0001:00019FD4       __ZN9__gnu_cxx26__concurrence_unlock_errorD1Ev
+ 0001:00019FEA       __ZN9__gnu_cxx26__concurrence_unlock_errorD0Ev
+ 0001:0001A00F       ___cxa_allocate_exception
+ 0001:0001A1ED       ___cxa_free_exception
+ 0001:0001A354       ___cxa_allocate_dependent_exception
+ 0001:0001A4F2       ___cxa_free_dependent_exception
+ 0001:0001A680       __ZTIN9__gnu_cxx24__concurrence_lock_errorE
+ 0001:0001A698       __ZTVN9__gnu_cxx24__concurrence_lock_errorE
+ 0001:0001A6AC       __ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+ 0001:0001A6B8       __ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+ 0001:0001A6D8       __ZTSN9__gnu_cxx24__concurrence_lock_errorE
+ 0001:0001A708       __ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+ 0001:0001A748       ___cxa_get_exception_ptr
+ 0001:0001A753       ___cxa_begin_catch
+ 0001:0001A7BC       ___cxa_end_catch
+ 0001:0001A83E       __ZSt18uncaught_exceptionv
+ 0001:0001A858       __ZNSt9exceptionD1Ev
+ 0001:0001A858       __ZNSt9exceptionD2Ev
+ 0001:0001A866       __ZNSt13bad_exceptionD1Ev
+ 0001:0001A866       __ZNSt13bad_exceptionD2Ev
+ 0001:0001A874       __ZN10__cxxabiv115__forced_unwindD1Ev
+ 0001:0001A874       __ZN10__cxxabiv115__forced_unwindD2Ev
+ 0001:0001A882       __ZN10__cxxabiv119__foreign_exceptionD1Ev
+ 0001:0001A882       __ZN10__cxxabiv119__foreign_exceptionD2Ev
+ 0001:0001A8A0       __ZNKSt9exception4whatEv
+ 0001:0001A8BE       __ZNKSt13bad_exception4whatEv
+ 0001:0001A8C8       __ZN10__cxxabiv119__foreign_exceptionD0Ev
+ 0001:0001A8DE       __ZN10__cxxabiv115__forced_unwindD0Ev
+ 0001:0001A8F4       __ZNSt13bad_exceptionD0Ev
+ 0001:0001A90A       __ZNSt9exceptionD0Ev
+ 0001:0001A928       __ZTVN10__cxxabiv119__foreign_exceptionE
+ 0001:0001A948       __ZTVN10__cxxabiv115__forced_unwindE
+ 0001:0001A968       __ZTVSt13bad_exception
+ 0001:0001A988       __ZTVSt9exception
+ 0001:0001A9A8       __ZTSN10__cxxabiv119__foreign_exceptionE
+ 0001:0001A9CC       __ZTIN10__cxxabiv119__foreign_exceptionE
+ 0001:0001A9D8       __ZTSN10__cxxabiv115__forced_unwindE
+ 0001:0001A9F8       __ZTIN10__cxxabiv115__forced_unwindE
+ 0001:0001AA48       ___cxa_get_globals_fast
+ 0001:0001AA5C       ___cxa_get_globals
+ 0001:0001ADDD       ___gxx_personality_v0
+ 0001:0001B26F       ___cxa_call_unexpected
+ 0001:0001B3F0       __ZN10__cxxabiv111__terminateEPFvvE
+ 0001:0001B431       __ZSt9terminatev
+ 0001:0001B444       __ZN10__cxxabiv112__unexpectedEPFvvE
+ 0001:0001B452       __ZSt10unexpectedv
+ 0001:0001B463       __ZSt13set_terminatePFvvE
+ 0001:0001B476       __ZSt14set_unexpectedPFvvE
+ 0001:0001B4CD       ___cxa_throw
+ 0001:0001B52C       ___cxa_rethrow
+ 0001:0001B668       __ZN9__gnu_cxx20recursive_init_errorD1Ev
+ 0001:0001B668       __ZN9__gnu_cxx20recursive_init_errorD2Ev
+ 0001:0001B67E       __ZN9__gnu_cxx20recursive_init_errorD0Ev
+ 0001:0001B6EA       __ZN9__gnu_cxx17__recursive_mutex6unlockEv
+ 0001:0001B743       ___cxa_guard_acquire
+ 0001:0001B981       ___cxa_guard_abort
+ 0001:0001B9FD       ___cxa_guard_release
+ 0001:0001BA80       __ZTVN9__gnu_cxx20recursive_init_errorE
+ 0001:0001BAA0       __ZTSN9__gnu_cxx20recursive_init_errorE
+ 0001:0001BAC4       __ZTIN9__gnu_cxx20recursive_init_errorE
+ 0001:0001BBB0       __ZNKSt9bad_alloc4whatEv
+ 0001:0001BBBA       __ZNSt9bad_allocD1Ev
+ 0001:0001BBBA       __ZNSt9bad_allocD2Ev
+ 0001:0001BBD0       __ZNSt9bad_allocD0Ev
+ 0001:0001BBF5       __ZSt15set_new_handlerPFvvE
+ 0001:0001BC08       __ZSt7nothrow
+ 0001:0001BC10       __ZTVSt9bad_alloc
+ 0001:0001BC60       __Znwj
+ 0001:0001BD2C       ___cxa_pure_virtual
+ 0001:0001BD58       __ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
+ 0001:0001BDB6       __ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
+ 0001:0001BE90       __ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
+ 0001:0001BEF6       __ZN10__cxxabiv120__si_class_type_infoD1Ev
+ 0001:0001BEF6       __ZN10__cxxabiv120__si_class_type_infoD2Ev
+ 0001:0001BF0C       __ZN10__cxxabiv120__si_class_type_infoD0Ev
+ 0001:0001BF38       __ZTVN10__cxxabiv120__si_class_type_infoE
+ 0001:0001BF68       __ZTSN10__cxxabiv120__si_class_type_infoE
+ 0001:0001BF90       __ZTIN10__cxxabiv120__si_class_type_infoE
+ 0001:0001BFE8       __ZNSt9type_infoD1Ev
+ 0001:0001BFE8       __ZNSt9type_infoD2Ev
+ 0001:0001BFF6       __ZNKSt9type_info14__is_pointer_pEv
+ 0001:0001BFFE       __ZNKSt9type_info15__is_function_pEv
+ 0001:0001C006       __ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv
+ 0001:0001C00E       __ZNSt9type_infoD0Ev
+ 0001:0001C024       __ZNKSt9type_infoeqERKS_
+ 0001:0001C082       __ZNKSt9type_info10__do_catchEPKS_PPvj
+ 0001:0001C098       __ZTVSt9type_info
+ 0001:0001C166       __ZN9__gnu_cxx27__verbose_terminate_handlerEv
+ 0001:00023111       ___cxa_demangle
+ 0001:00023242       ___gcclibcxx_demangle_callback
+ 0001:00023CC8       ___cxa_call_terminate
+ 0001:00023D08       ___cxa_current_exception_type
+ 0001:00023D30       ___do_global_dtors
+ 0001:00023D3B       ___do_global_ctors
+ 0001:00023D53       ___main
+ 0001:00023D78       ___ctordtorInit
+ 0001:00023DAA       ___ctordtorTerm
+ 0001:00023DE0       ___ehInit
+ 0001:00023E15       ___ehTerm
+ 0001:00024000       __etext
+ 0001:00024000       _etext
+ 0002:00000000       ___data_start
+ 0002:00000000       __data
+ 0002:000004E4       __ZN5mcube7versionE
+ 0002:00000B44       _version
+ 0002:00003780       __ZN10__cxxabiv119__terminate_handlerE
+ 0002:00003840       __ZN10__cxxabiv120__unexpected_handlerE
+ 0002:00003E80       __ZN5mcube8numcubesE
+ 0002:00003E80       ___bss_start
+ 0002:00003E80       __edata
+ 0002:00003E80       _edata
+ 0002:00003E90       _thecube
+ 0002:00004244       _randm
+ 0002:00004245       _verbal
+ 0002:00004248       _inmode
+ 0002:0000424C       _coltochar
+ 0002:00004280       __ZNSs4_Rep20_S_empty_rep_storageE
+ 0002:00004290       __ZSt15future_category
+ 0002:000042C0       __ZN9__gnu_cxx15_Atomicity_lockILi0EE17_S_atomicity_lockE
+ 0002:00008D40       ___new_handler
+ 0002:00008D90       __end
+ 0002:00008D90       _end
+
+Program entry point at 0001:00000000

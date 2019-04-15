@@ -1,0 +1,562 @@
+the NEW 4x4x4 Rubik's Cube Solver
+.................................
+
+
+CONTENTS:
+* COMMAND LINE INTERFACE DOCUMENTATION
+* COMPILING
+* SOURCE CODE DOCUMENTATION
+* CONTACT INFORMATION
+
+
+
+COMMAND LINE INTERFACE DOCUMENTATION
+....................................
+
+
+The command-line interface attempts to be simple, but some may still find it a
+bit frustrating.  For that reason, I have provided this documentation.
+
+Essentially, to pass a cube to the solver, all you need to have is 6 different
+characters to represent each color on the cube, and the correct order to type
+them to the solver.  Any 6 characters will work - "1, 2, 3, 4, 5, 6, " if you
+are more mathematically inclined, or perhaps "W, G, O, B, R, Y, " if you prefer
+something more intuitive and symbolic.  Getting them in the correct order is
+also important.  If you get it wrong, the solver will show you what your
+diagram looked like so that you can try to get a better understanding of how to
+input cubes.
+You pass cubes in one of two methods: either all in one string of characters, or
+seperated out face by face.  It's generally easier to seperate out the input by
+face.
+The syntax is like this:
+ mcube M:################ M:################ ...
+where M: is any of U: D: L: R: F: or B: (not case sensitive) representing the
+top, bottom, left, right, front or back faces respectively, and ################
+is the string of characters representing the colors on that face.  Examples
+below.
+If you wish to use the all-in-one-string method, just remember, the order is:
+top face, left face, front face, right face, back face, bottom face.
+In either case, each face should be inputted from top to bottom, left to right,
+like if it was a flattened box.  You just read off the colors in the same order
+you read text (English text at least).
+Here is an example
+
+If your cube looks like this:
+
+ top      Y R R Y
+          W Y R W
+          G B Y B
+          B G W O
+ O O W R  W Y B G  Y Y G G  R B W B
+ O O Y Y  R B G B  Y B W W  R O W W
+ B B O B  R G O G  R R W R  G G R O
+ O G O G  R O R Y  B O O O  W W G W
+          W Y Y R
+          Y W Y G
+          O G R B
+ bottom   G Y B B
+
+then the command-line looks like this:
+
+ mcube U:YRRYWYRWGBYBBGWO L:OOWROOYYBBOBOGOG F:WYBGRBGBRGOGRORY R:YYGGYBWWRRWRBOOO B:RBWBROWWGGROWWGW D:WYYRYWYGOGRBGYBB
+or the single-string syntax:
+ mcube YRRYWYRWGBYBBGWOOOWROOYYBBOBOGOGWYBGRBGBRGOGRORYYYGGYBWWRRWRBOOORBWBROWWGGROWWGWWYYRYWYGOGRBGYBB
+
+  Once you've figured out the somewhat cryptic act of passing a cube to the
+solver, you will need to master the even more cryptic action of deciphering the
+output.  The solver is designed to be pipable to other programs, so it uses
+certain numeric codes to identify what information it is sending.  Those codes
+are explained below.
+  Between codes 210 and 211 are where the solution is sent.  The solution looks
+like a series of tokens representing moves, like this:
+
+210 sending solution:
+BC, fA, dR, fC, RD, RD, fC, rU, FC, rU, fA, ...
+211 completed solution.
+
+These codes are meant to be somewhat intuitive, although many people find them
+confusing at first.  Each 2-letter code has 2 components.  The 1st letter
+represents the slice (of which there are 12 different possibilities), and the
+2nd letter represents the direction to turn that face (of which there are 6
+different possibilities - but each particular slice only has 2 possibilities).
+
+The slices correspond like so (NOTE: they are CASE SENSITIVe):
+
+U -> Top slice
+u -> Inner top slice (e.g. 2nd slice from the top -- inner means 2nd row in)
+d -> Inner bottom slice
+D -> Bottom slice
+L -> Left slice
+l -> Inner left slice
+r -> Inner right slice
+R -> Right slice
+F -> Front slice
+f -> Inner front slice
+b -> Inner back slice
+B -> Back slice
+
+The directions correspond like so:
+
+L -> rotate slice left (applies to U,u,d,D slices)
+R -> rotate slice right (U,u,d,D slices)
+U -> rotate slice up (L,l,r,R slices)
+D -> rotate slice down (L,l,r,R slices)
+C -> rotate slice clockwise (F,f,b,B slices)
+A -> rotate slice anticlockwise (F,f,b,B slices)
+
+Thus, the example solution given above would be translated like so:
+BC, fA, dR, fC, RD, RD, fC, rU, FC, rU, fA, ...  ->
+
+Back Clockwise,
+Inner Front Anticlockwise
+Inner Bottom Right
+Inner Front Clockwise
+Right Down
+Right Down
+Inner Front Clockwise
+Inner Right Up
+Front Clockwise
+Inner Right Up
+Inner Front Anticlockwise
+
+***NOTE***: many people ask me whether BC means rotate the back face clockwise
+when looking at it from the back or from the front.  The answer is, rotate it
+clockwise when looking from the FRONT.  All the moves assume you are looking at
+the cube from the front (not the TOP, nor any other face but the front!!!).  The
+front face is in the middle of the "t", not the top; so the diagram corresponds
+like so:
+
+       TOP
+LEFT   FRONT  RIGHT  BACK
+       BOTTOM
+
+*** Update - Aug / 2005: there are now a number of compile-time config options
+in the file config.h, and by default, I have enabled it to verbose output with
+a keyboard pause every pageful of data.  If you wish to pipe this program and
+would rather it use the shorter tokenized syntax without waiting for keypresses,
+just edit config.h and recompile.  There are also a few other settings in
+config.h that have to do with certain output format settings.
+
+ Finally, all the possible numeric codes are shown below:
+
+101 version %s (%s)                     -> the version of the solver
+200 cube solved ok.                     -> successful solve code
+201 terminating successfully.           -> successful terminate code
+202 %i moves %i groups %i %i %i %i %i %i %i %i %i %i %i     -> information:
+                    -> total moves, number of moves groups, number of moves in
+                       each group.  Groups are described below.
+203 command-line: mcube %s              -> the commandline to generate that
+                                           particular solution again.
+210 sending solution:                   -> means the next lines will be the
+                                           solution
+211 completed solution.                 -> means the solution has been
+                                           completely sent
+220 diagram:                            -> start of visual diagram
+221 diagram end.                        -> end of visual diagram
+400 syntax:                             -> start of syntax notes (e.g. error)
+401 end of notes.                       -> end of syntax notes
+500 ERROR: ...                          -> unsuccessful solve code (proceeded by
+                                           a specific error code)
+501 terminating unsuccessfully.         -> unsuccessful terminate code
+502 unexpected error (not used)         -> yeah who knows......
+510 non-protocol input...               -> a bad string was sent to the solver
+511 not inited (not used)               -> something wrong with cube class!!!
+512 incorrect cubelets                  -> most common error:
+                    -> means an invalid cube was passed to the solver (probably
+                       just made a minor mistake somewhere - check and retry)
+513 nondescript (hopefully not used)    -> you found a bug in the solver!
+                                           (infinite loop) email me about it.
+514 edge flip parity                    -> your cube has an edge flip parity
+                                           error (did you reassemble it?)
+515 corner rotation parity              -> your cube has a corner rotation
+                                           error (did you reassemble it?)
+516 backward corner parity              -> your cube has a backward corner
+                                           error (mispainted)
+517 center swap parity                  -> your cube has swapped centers (did
+                                           you reassemble it?) - NOT USED
+
+  Unlike the 3x3x3 solver, Edge swap parity is not an issue in 4x4x4 cubes, due
+to the physics of the 4x4x4 cube.  What would be edge swap parity is replaced by
+certain restrictions on the ordered placement of the centers.
+
+  It is also important to note that this solver "solves" a cube by making each
+face a solid color.  It is not programmed to be able to re-order centers (e.g.,
+it may or may not work for novelty "picture" cubes).  In this sense, the
+definition of "solved" is ambiguous - since there are 4 of each center, and
+those centers can be in any order (as long as they're on the same face), there
+are numerous combinations that meet the criterion of "a solid color on each
+face," and thus many combinations that are considered "solved."  If you have
+insight as to an algorithm to reorder centers, or are just very keen on having
+me investigate one, please let me know.
+
+  Also, for informative purposes, the solver breaks a solution down into GROUPS.
+A group is what you might consider a "phase" of the solution.  At present there
+are 11 groups, in the following order:
+
+1. Top centers
+2. Bottom centers
+3. Top corners
+4. Bottom corners position
+5. Bottom corners orient
+6. 3/4 of top edge pairs
+7. Bottom edge pairs
+8. Keyhole top edge pair
+9. 2nd layer edges
+10. 3rd layer edges
+11. Side centers
+
+
+
+COMPILING
+.........
+
+
+First, a quick note - the command-line version of the solver has a few compile-
+time options which you can #define, located in config.h.  Here's a quick list:
+  #define SHOWENDINGDIAGRAM       // whether to show the ending diagram
+  #define WAITFORENTERTOEND       // whether to wait for a key when ending
+  #define SHOWBADCOMMANDLINE      // whether to regurgitate bad input
+These are fairly inconsequential as to the functionality of the solver, but they
+do have an effect on the "user interface" (if you want to call it that).
+
+Second, a quick instructions to compile.  It's VERY easy.  All you need is GCC
+with C++ (g++) on *nix, or MSVS on Win32 (or you can even probably figure it out
+on your own if you don't have any of those - just compile the two .cpp's and
+link them together).
+on *nix, type (from a console):
+  make
+on win32, type (from the visual studio command prompt):
+  nmake -f makefile.win32
+or just use the .sln file...
+the output is: mcube (on *nix) or mcube.exe (on win32).
+
+Here's a list of files that should be included:
+  config.h          -> compile time config options
+  mcube.h           -> cube class header
+  mcube.cpp         -> cube class
+  main.cpp          -> main UI
+  Makefile          -> make script for *nix
+  makefile.win32    -> make script for win32
+  readme.txt        -> docs (this file)
+
+
+
+SOURCE CODE DOCUMENTATION
+.........................
+
+
+Source code documentation (if you want to use the solver in your own programs):
+
+Well the solver class has a lot of things you can do with it... here's a quick
+start guide if you feel like (for whatever reason) having a 4x4x4 rubik's cube
+solver in your own program.
+
+the solver is in C++ (not C sorry) but can be pretty easily translated to
+languages like java or whatever.. For now I'll assume you're using C++.
+
+So, first thing, remember to
+ #include "mcube.h"
+into your program, and add mcube.cpp to your project files and include mcube.o
+(or mcube.obj on win32) into your list of objects during linking.
+
+Now then, you can instantiate a new cube quite simply like this
+
+mcube mycube;
+
+It will automatically reset the new cube in the constructor...
+Now that you have mycube, you can do things with it;)
+
+mycube.resetcube(); to reset the cube
+  (returns nothing)
+
+mycube.scramblecube(); to scramble the cube model
+  (returns nothing)
+
+mycube.solvecube(); to solve the cube
+  (returns an int which is the same as mycube.erval)
+
+mycube.issolved(); to see if a cube is solved (see definition of solved below)
+  (returns a bool true if solved or false if not..
+
+mycube.UL(); - rotate top left
+       UR(); - rotate top right
+       DL(); - bottom left
+       DR(); - etc...
+       LU(); - left up
+       LD();
+       RU();
+       RD();
+       FC(); - front clockwise
+       FA(); - front counterclockwise
+       BC();
+       BA();
+       uL(); - inner-top left
+       uR();
+       dL();
+       dR();
+       lU();
+       lD();
+       rU();
+       rD();
+       fC();
+       fA();
+       bC();
+       bA();
+       CL(); - whole cube left
+       CR();
+       CU();
+       CD();
+       CC();
+       CA();
+       U2(); - top twice
+       D2();
+       L2();
+       R2();
+       F2();
+       B2();
+       u2();
+       d2();
+       l2();
+       r2();
+       f2();
+       b2();
+
+Also you can rotate slices with these calls:
+mycube.slice_l(x); - rotate slice x left
+       slice_r(x); - etc...
+       slice_u(x);
+       slice_d(x);
+       slice_c(x);
+       slice_a(x);
+
+more things to do:
+
+mycube.cube[x][y][z] = color;
+  -  to repaint a face
+*mycube.face(x, y, z) = color;
+  - another way to repaint a face
+
+face = mycube.cube[x][y][z];
+  -  to read an indidual face
+face = *mycube.face(x, y, z);
+  - another way to read an individual face
+
+if (mycube == yourcube)
+  - an overloaded == (and !=) comparison...
+
+numberofcubes = mycube.numcubes
+  - to see how many instantiated cubes there are
+numberofcubes = mcube::numcubes
+  - another way
+
+mycube.domoves(string s); - to execute a series of moves
+  - see notes on string format
+
+mycube.dosolution(); - to execute the solution
+  (won't do anything until mycube.solvecube() is called)
+
+
+Other things in the mcube class (take them or leave them):
+
+string shortersolution = mycube.concise(string s);
+  - to strip redundant moves from a string
+  (there's an optional second parameter, bool b, which, if true, will affect the
+  mov[] array as well)
+
+string usehalfs = mycube.usehalfturns(string s);
+  - to change occurances like "LU.LU." to "L2." in a move string
+  (like concise, there's an optional second parameter, bool b)
+
+int mycube.erval
+  - if there was an error during solvecube() it will be set here
+
+int mycube.warnval
+  - if there was a warning during solvecube() it will be set here
+  (warnings = possible redundancy bugs)
+
+int mycube.shorten
+  - set this to one of the shorten constants to define how much solvecube()
+  should try to find shorter solutions...
+
+string mycube.solution
+  - a formated string containing the solution for the cube (set by solvecube())
+
+int mycube.fx, fy & fz
+  - coordinates for a cubelet set by find* functions
+
+To find a given cubelet, use these functions:
+
+mycube.findcenter_u(int a); find given center on top
+       findcenter_d(int a); find given center on bottom
+       findcenter_l(int a); etc...
+       findcenter_r(int a);
+       findcenter_f(int a);
+       findcenter_b(int a);
+       findcenter_not_u(int a); find given center NOT on top
+       findcenter_not_d(int a);
+       findcenter_not_l(int a);
+       findcenter_not_r(int a);
+       findcenter_not_f(int a);
+       findcenter_not_b(int a);
+       findcenter(int a); - just find the given center anywhere
+       find_not_center_u(int a); find center on top that is NOT of given color
+       find_not_center_d(int a); etc...
+       find_not_center_l(int a);
+       find_not_center_r(int a);
+       find_not_center_f(int a);
+       find_not_center_b(int a);
+       findedge_l(int a, int b); find given left edge (NOT to be confused with find given edge on left side)
+       findedge_r(int a, int b); find right edge (see notes on edge leftism/rightism)
+       findedge(int a, int b); just find either left or right edge
+       findcorner_c(int a, int b, int c); find given corner with parameters given in clockwise order
+       findcorner_a(int a, int b, int c); find corner with parameters in counterclockwise order
+       findcorner(int a, int b, int c); just find the given corner (any order)
+
+string formatting functions -
+ there are 3 general formatting notations (described in the notes)
+
+string mcube::std_to_metr(string s)
+  converts a "standard" string to "metric"
+string mcube::metr_to_std(string s)
+  converts a "metric" string to "standard"
+string mcube::std_to_rel(string s)
+  converts a "standard" string to "relative"
+string mcube::rel_to_std(string s)
+  converts a "relative" string to "standard"
+string mcube::metr_to_rel(string s)
+  converts a "metric" string to "relative"
+string mcube::rel_to_metr(string s)
+  converts a "relative" string to "metric"
+
+If you want your solution broken down by groups -
+
+int totalmoves = mycube.mov[0];
+int movesforstep1 = mycube.mov[1];
+int movesforstep2 = mycube.mov[2];
+  there are a total of mcube::MOV (constant) "steps" or "groups"
+  (e.g., solve top centers = group 1, solve bottom centers = group 2,
+  solve top corners = group 3, etc...)
+
+class constants:
+
+group 1 - error codes returned by solvecube()
+
+mcube::ERR_NOTINITED
+  means you tried to solve an uninitialized cube
+mcube::ERR_MISPAINTED
+  you tried to solve a mispainted cube
+mcube::ERR_NONDESCRIPT
+  some problem occured during the solvecube() phase and the solver bailed out to
+  prevent an apparent infinite loop (means there's a bug somewhere)
+mcube::ERR_PARITY_EDGE_FLIP
+  there was an edge flip parity error
+mcube::ERR_PARITY_CORNER_ROTATION
+  there was a corner rotation parity error
+mcube::ERR_PARITY_CORNER_BACKWARD
+  there was a backward corner parity error
+mcube::ERR_PARITY_CENTER_SWAP
+  there was a center swap parity (NOT USED)
+
+group 2 - flags to set mycube.shorten to:
+
+mcube::SHORTEN_NONE
+  don't shorten at all
+mcube::SHORTEN_STRIP_SOME
+  call concise only after each move group
+mcube::SHORTEN_STRIP_ALL
+  call concise also at the very end of the solution...
+mcube::SHORTEN_STRIP_ROTATE_SOME
+  strip all + try the solution with every color on top and return shortest
+mcube::SHORTEN_STRIP_ROTATE_ALL
+  also try each four orientations of each color on top (takes longest time)
+
+group 3 - codes returned by find*()
+
+mcube::NEGX = -1
+  negative X axis (left)
+mcube::POSX = 1
+  positive X axis (right)
+mcube::NEGY = -2
+  negative Y axis (bottom)
+mcube::POSY = 2
+  positive Y axis (top)
+mcube::NEGZ = -3
+  negative Z axis (front/near)
+mcube::POSZ = 3
+  positive Z axis (back/far)
+
+group 4 - misc
+
+mcube::ITER_THRESHOLD - don't mess with this
+  how many times findsolution() should try a certain section of the cube before
+  bailing out for an apparent infinite loop
+
+Other miscellaneous class items...
+
+bool mycube.inited - whether the cube has been initialized
+  (generally don't need to mess with it.. the constructor, resetcube() and
+  scramblecube() will set this to true)
+
+static const char mcube::version - the version of the solver
+  if for whatever reason you want to know what version it is...
+
+static const int mcube::N = 4
+  the width of the dimensions (e.g., NxNxN).. many of the functions in the
+  solver are generalized for any size cube...
+
+void mycube.copytemp(c, t)
+  copies the array c into t (where c and t are of size [N+2][N+2][N+2])
+
+and the various macros:
+
+DOMOVES(a, b) - does the sequence of moves (b) and then appends string a with b.
+  - for those of you who want it easier when toying with findsolution()...
+  (instead of a += "UL.LU."; UL(); LU(); you can just do DOMOVES(a, "UL.LU.");)
+
+GETCORNER_C(a,b,c,x,y,z,f)
+  f = findcorner_c(a, b, c); x = fx; y = fy; z = fz
+GETCORNER_A(a,b,c,x,y,z,f)
+  f = findcorner_a(a, b, c); x = fx; y = fy; z = fz
+GETEDGE_L(a,b,x,y,z,f)
+  f = findedge_l(a, b); x = fx; y = fy; z = fz
+GETEDGE_R(a,b,x,y,z,f)
+  f = findedge_r(a, b); x = fx; y = fy; z = fz
+
+and finally, for solidarity, the private class members and methods which you
+can't access directly:
+
+string findsolution(); - contains the actual solver algorithm - but note, this
+  only works when cube[][][] has been specially prepared (arranged to match a
+  specific color scheme), which is why it is private (it is used from within
+  solvecube(), which has a lot of code to prepare the cube properly).
+
+Notes:
+1. definition of solved: we define solved simply as meaning: a solid color on
+   each face, and each of the colors 1-6 used (e.g., a totally white cube is not
+   solved)
+2. overloaded == comparison: this only checks if 2 cubes have the same colors in
+   the same position, however if one cube is just the second cube but, say,
+   rotated to the left, then the == comparison will return false.
+3. edges can be either left or right - parity prevents an edge from moving to
+   the opposite edge row without also flipping which makes "left" and "right"
+   edges distinctly unique from eachother.
+4. formatted strings: the "standard" string notation (used by default) is like
+   so: <slice><dir>.
+   so for example, "top left, inner back counterclockwise" would look like this:
+   "UL.bA."
+   the same move in "metric" notation is:
+   "4L.3A." (faces DduU=1234, LlrR=1234, FfbB=1234)
+   the same move in "relative" notation is:
+   "U+.b-." (directions L=+, R=-, D=+, U=-, C=+, A=-)
+   also, halfturns ONLY apply to relative or standard strings (in metric it
+   would be ambiguous)
+
+
+
+CONTACT INFORMATION
+...................
+
+
+Well, I hope that all helped.  If you are still baffled, drop me an email.
+
+ - Eric, root@wrongway.org

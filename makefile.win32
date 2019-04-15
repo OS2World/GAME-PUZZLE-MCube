@@ -1,0 +1,53 @@
+# makefile for mcube with MSVS on win32 by Eric
+
+CC=cl
+CPP=cl
+LINK=link
+RC=rc
+CFLAGS=/nologo /EHsc /ML /O2
+LFLAGS=/nologo /subsystem:console
+RFLAGS=
+RM=del /Q
+INCLUDES=mcube.h config.h
+OBJS=main.obj mcube.obj
+RESS=
+LIBS=
+DBGCFLAGS=/EHsc /MLd /Zi
+DBGLFLAGS=/subsystem:console /debug
+DBGRFLAGS=
+DBGOBJS=main.obj.dbg mcube.obj.dbg
+DBGRESS=
+DBGLIBS=
+PDBS=mcube.ilk mcube.pdb vc70.pdb
+
+all: build
+
+debug: debugbuild
+
+build: $(OBJS) $(RESS)
+	$(LINK) $(LFLAGS)  /out:mcube.exe  $(OBJS) $(RESS) $(LIBS)
+
+debugbuild: $(DBGOBJS) $(DBGRESS)
+	$(LINK) $(DBGLFLAGS)  /out:mcube.exe  $(OBJS) $(DBGRESS) $(DBGLIBS)
+
+clean:
+	$(RM) $(OBJS) $(RESS)
+	$(RM) $(PDBS)
+
+main.obj: main.cpp $(INCLUDES)
+	$(CPP) $(CFLAGS) /c main.cpp
+
+mcube.obj: mcube.cpp $(INCLUDES)
+	$(CPP) $(CFLAGS) /c mcube.cpp
+
+mcube.res: mcube.rc mcube.ico resource.h
+	$(RC) $(RFLAGS) /fo mcube.res mcube.rc
+
+main.obj.dbg: main.cpp $(INCLUDES)
+	$(CPP) $(DBGCFLAGS) /c main.cpp
+
+mcube.obj.dbg: mcube.cpp $(INCLUDES)
+	$(CPP) $(DBGCFLAGS) /c mcube.cpp
+#	$(CPP) $(CFLAGS) /S mcube.cpp
+
+dummy:

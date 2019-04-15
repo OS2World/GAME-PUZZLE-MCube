@@ -1,0 +1,15 @@
+This is the OS/2 port of MCube, a rubik cube solver for the command line.
+
+I did it by slightly modifying the original makefile (here included with the
+complete source distribution) and it seems to work fine.
+
+The complete documentation is in the file readme.txt, so please take a look
+at it before trying.
+
+Please consider making Paul Smedley a donation for his work in GCC!
+
+Have fun solving Rubik cubes :)
+
+Mentore Siesto
+Pisa, Italy
+mentore.siesto@alice.it
